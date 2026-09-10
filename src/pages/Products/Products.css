@@ -401,62 +401,114 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 40px 0 20px 0;
+  gap: 10px;
+  margin: 40px 0 24px 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pagination-arrow-btn {
   background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
+  border: 1px solid var(--ameza-border-card, rgba(255, 255, 255, 0.08));
   color: var(--ameza-text-secondary, #DAC8C3);
-  padding: 10px 20px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 12.5px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s cubic-bezier(0.4, 0, 0.2, 1));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
 }
 
 .pagination-arrow-btn:hover:not(:disabled) {
   border-color: var(--ameza-ruby, #E11D48);
   color: #FFFFFF;
   background: rgba(225, 29, 72, 0.16);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
+  transform: translateY(-1px);
+}
+
+.pagination-arrow-btn:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .pagination-arrow-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.04);
 }
 
+.pagination-arrow-icon {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.pagination-arrow-label-desktop {
+  display: inline;
+}
+
+.pagination-arrow-label-mobile {
+  display: none;
+}
+
+.pagination-numbers,
 .pagination-pages-list {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
+.pagination-num-btn,
 .page-num-btn {
   width: 38px;
   height: 38px;
+  min-width: 38px;
   border-radius: 50%;
   background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
+  border: 1px solid var(--ameza-border-card, rgba(255, 255, 255, 0.08));
   color: var(--ameza-text-secondary, #DAC8C3);
   font-family: var(--font-mono, monospace);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-fast);
-  display: flex;
+  transition: all var(--transition-fast, 0.2s cubic-bezier(0.4, 0, 0.2, 1));
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.page-num-btn:hover {
+.pagination-num-btn:hover:not(.active),
+.page-num-btn:hover:not(.active) {
   border-color: var(--ameza-ruby, #E11D48);
   color: #FFFFFF;
+  background: rgba(225, 29, 72, 0.12);
+  transform: translateY(-1px);
 }
 
+.pagination-num-btn:active,
+.page-num-btn:active {
+  transform: translateY(0);
+}
+
+.pagination-num-btn.active,
 .page-num-btn.active {
   background: var(--ameza-ruby-gradient, linear-gradient(135deg, #FB7185 0%, #E11D48 50%, #9F1239 100%));
   border-color: transparent;
@@ -465,11 +517,18 @@
   box-shadow: 0 4px 14px rgba(225, 29, 72, 0.45);
 }
 
+.pagination-ellipsis,
 .page-ellipsis {
   font-family: var(--font-mono, monospace);
   color: var(--ameza-text-muted, #9E8B89);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  font-size: 13px;
+  padding: 0 2px;
 }
 
 /* ── 6. Brand Pledge Banner ───────────────────────────── */
@@ -562,11 +621,38 @@
     display: none;
   }
   .products-pagination-wrap {
-    gap: 8px;
+    gap: 6px;
+    margin: 28px 0 16px 0;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .pagination-arrow-btn {
-    padding: 8px 14px;
+    padding: 7px 12px;
+    font-size: 11.5px;
+    gap: 4px;
+  }
+  .pagination-arrow-label-desktop {
+    display: none;
+  }
+  .pagination-arrow-label-mobile {
+    display: inline;
+  }
+  .pagination-numbers,
+  .pagination-pages-list {
+    gap: 4px;
+  }
+  .pagination-num-btn,
+  .page-num-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 12px;
+  }
+  .pagination-ellipsis,
+  .page-ellipsis {
+    min-width: 14px;
     font-size: 11px;
+    padding: 0 1px;
   }
 }
 
@@ -597,9 +683,33 @@
     font-size: 11px;
   }
 
+  .products-pagination-wrap {
+    gap: 4px;
+  }
+
+  .pagination-arrow-btn {
+    padding: 6px 9px;
+    font-size: 10.5px;
+    gap: 3px;
+  }
+
+  .pagination-numbers,
+  .pagination-pages-list {
+    gap: 3px;
+  }
+
+  .pagination-num-btn,
   .page-num-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 11.5px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 10.5px;
+  }
+
+  .pagination-ellipsis,
+  .page-ellipsis {
+    min-width: 10px;
+    font-size: 10px;
+    padding: 0;
   }
 }

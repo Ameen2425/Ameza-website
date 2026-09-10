@@ -114,14 +114,14 @@ const ProductList = () => {
     }
 
     if (page <= 3) {
-      return [1, 2, 3, 4, ".....", totalPages];
+      return [1, 2, 3, 4, "...", totalPages];
     }
 
     if (page >= totalPages - 2) {
-      return [1, ".....", totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+      return [1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
     }
 
-    return [1, ".....", page - 1, page, page + 1, ".....", totalPages];
+    return [1, "...", page - 1, page, page + 1, "...", totalPages];
   }, [page, totalPages]);
 
   const handlePageChange = (newPage) => {
@@ -291,19 +291,21 @@ const ProductList = () => {
               <div className="products-pagination-wrap">
                 <button
                   type="button"
-                  className="pagination-arrow-btn"
+                  className="pagination-arrow-btn prev-btn"
                   onClick={() => handlePageChange(Math.max(1, page - 1))}
                   disabled={page === 1}
                   aria-label="Previous Page"
                 >
-                  ← Previous
+                  <span className="pagination-arrow-icon">←</span>
+                  <span className="pagination-arrow-label-desktop">Previous</span>
+                  <span className="pagination-arrow-label-mobile">Prev</span>
                 </button>
 
-                <div className="pagination-numbers">
+                <div className="pagination-numbers pagination-pages-list">
                   {paginationItems.map((item, idx) => {
                     if (typeof item === "string") {
                       return (
-                        <span key={`ellipsis-${idx}`} className="pagination-ellipsis">
+                        <span key={`ellipsis-${idx}`} className="pagination-ellipsis page-ellipsis">
                           {item}
                         </span>
                       );
@@ -312,8 +314,10 @@ const ProductList = () => {
                       <button
                         key={item}
                         type="button"
-                        className={`pagination-num-btn ${page === item ? "active" : ""}`}
+                        className={`pagination-num-btn page-num-btn ${page === item ? "active" : ""}`}
                         onClick={() => handlePageChange(item)}
+                        aria-label={`Page ${item}`}
+                        aria-current={page === item ? "page" : undefined}
                       >
                         {item}
                       </button>
@@ -323,12 +327,14 @@ const ProductList = () => {
 
                 <button
                   type="button"
-                  className="pagination-arrow-btn"
+                  className="pagination-arrow-btn next-btn"
                   onClick={() => handlePageChange(Math.min(totalPages, page + 1))}
                   disabled={page === totalPages}
                   aria-label="Next Page"
                 >
-                  Next →
+                  <span className="pagination-arrow-label-desktop">Next</span>
+                  <span className="pagination-arrow-label-mobile">Next</span>
+                  <span className="pagination-arrow-icon">→</span>
                 </button>
               </div>
             )}
