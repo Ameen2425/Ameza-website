@@ -48,10 +48,20 @@
 }
 
 .pine-stars {
-  color: var(--ameza-ruby, #E11D48);
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5px;
   font-size: 15px;
-  letter-spacing: 2px;
   line-height: 1;
+}
+
+.pine-stars .star-filled {
+  color: var(--ameza-ruby, #E11D48);
+  filter: drop-shadow(0 0 3px rgba(225, 29, 72, 0.45));
+}
+
+.pine-stars .star-empty {
+  color: rgba(218, 200, 195, 0.3);
 }
 
 .pine-rating-score {

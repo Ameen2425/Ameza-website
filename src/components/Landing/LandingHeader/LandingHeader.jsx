@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import BrandLogo from "../../common/BrandLogo/BrandLogo";
 import "./LandingHeader.css";
 
 const LandingHeader = () => {
@@ -28,8 +29,7 @@ const LandingHeader = () => {
       <header className={`landing-header${isScrolled ? " landing-header-scrolled" : ""}`}>
         <div className="landing-header-container">
           <Link to="/landing" className="landing-logo" aria-label="AMEZA">
-            <span className="landing-logo-wordmark">AMEZA</span>
-            <span className="landing-logo-dot" aria-hidden="true" />
+            <BrandLogo variant="full" />
           </Link>
 
           <nav className="landing-nav" aria-label="Landing navigation">

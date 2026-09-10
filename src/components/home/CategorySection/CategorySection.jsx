@@ -51,11 +51,11 @@ const CategorySection = () => {
         variants={staggerContainer}
       >
         {[
-          { num: "01", name: "Lipstick & Atelier", desc: "Signature pigments & velours", icon: "💄", type: "beauty", link: "/products?category=lipstick", count: "150+ Shades" },
-          { num: "02", name: "Botanical Skincare", desc: "Squalane & active elixirs", icon: "🌿", type: "beauty", link: "/products?category=skincare", count: "120+ Formulations" },
-          { num: "03", name: "Complexion & Base", desc: "Featherweight foundations", icon: "✨", type: "beauty", link: "/products?category=foundation", count: "160+ Tones" },
-          { num: "04", name: "Haute Eyes & Brows", desc: "High-pigment palettes & liners", icon: "👁️", type: "beauty", link: "/products?category=eyeshadow", count: "200+ Products" },
-          { num: "05", name: "Haute Perfumery", desc: "Rare botanicals & scents", icon: "💎", type: "beauty", link: "/products?category=fragrance", count: "48+ Scents" },
+          { num: "01", name: "Lipstick & Atelier", desc: "Signature pigments & velours", icon: "💄", type: "lipstick", link: "/products?category=lipstick", count: "150+ Shades" },
+          { num: "02", name: "Botanical Skincare", desc: "Squalane & active elixirs", icon: "🌿", type: "skincare", link: "/products?category=skincare", count: "120+ Formulations" },
+          { num: "03", name: "Complexion & Base", desc: "Featherweight foundations", icon: "✨", type: "complexion", link: "/products?category=foundation", count: "160+ Tones" },
+          { num: "04", name: "Haute Eyes & Brows", desc: "High-pigment palettes & liners", icon: "👁️", type: "eyes", link: "/products?category=eyeshadow", count: "200+ Products" },
+          { num: "05", name: "Haute Perfumery", desc: "Rare botanicals & scents", icon: "💎", type: "perfumery", link: "/products?category=fragrance", count: "48+ Scents" },
         ].map((cat) => (
           <motion.div
             key={cat.num}

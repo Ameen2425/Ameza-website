@@ -1,5 +1,5 @@
 /* =========================================================
-   AMEZA BRAND LOGO (OBSIDIAN & 24K IMPERIAL GOLD)
+   AMEZA BRAND LOGO (OBSIDIAN VELVET & CRIMSON RUBY RED)
    ========================================================= */
 
 .ameza-brand-logo {
@@ -49,8 +49,8 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--ameza-gold, #E5B83B);
-  box-shadow: 0 0 10px rgba(229, 184, 59, 0.9);
+  background: var(--ameza-ruby, #E11D48);
+  box-shadow: 0 0 10px rgba(225, 29, 72, 0.9);
   display: inline-block;
   margin-left: 2px;
 }

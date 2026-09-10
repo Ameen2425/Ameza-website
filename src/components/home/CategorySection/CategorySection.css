@@ -148,9 +148,9 @@
 }
 
 .home-category-card:hover .home-cat-count-pill {
-  color: var(--ameza-gold-bright, #FFF5D0);
-  background: rgba(229, 184, 59, 0.14);
-  border-color: var(--ameza-gold, #E5B83B);
+  color: var(--ameza-ruby-bright, #FFE4E6);
+  background: rgba(225, 29, 72, 0.14);
+  border-color: var(--ameza-ruby, #E11D48);
 }
 
 .home-cat-icon {
@@ -181,7 +181,7 @@
 }
 
 .home-category-card:hover .home-cat-card-body h3 {
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--ameza-ruby-bright, #FFE4E6);
 }
 
 .home-cat-card-body p {
@@ -210,8 +210,8 @@
 }
 
 .home-category-card:hover .home-cat-card-footer {
-  color: var(--ameza-gold, #E5B83B);
-  border-color: var(--ameza-border-gold);
+  color: var(--ameza-ruby-bright, #FFE4E6);
+  border-color: var(--ameza-border-ruby);
 }
 
 .home-cat-arrow {
@@ -224,11 +224,11 @@
 }
 
 /* ── Colour Accent Borders per Category ───────────────── */
-.cat-electronics { border-top: 2px solid var(--ameza-sapphire, #3B82F6); }
-.cat-fashion     { border-top: 2px solid var(--ameza-copper, #E67E64); }
-.cat-beauty      { border-top: 2px solid var(--ameza-emerald, #10B981); }
-.cat-home        { border-top: 2px solid var(--ameza-gold, #E5B83B); }
-.cat-footwear    { border-top: 2px solid var(--ameza-crimson, #E11D48); }
+.cat-lipstick   { border-top: 2px solid var(--ameza-ruby, #E11D48); }
+.cat-skincare   { border-top: 2px solid var(--ameza-copper, #E67E64); }
+.cat-complexion { border-top: 2px solid rgba(251, 113, 133, 0.85); }
+.cat-eyes       { border-top: 2px solid var(--ameza-sapphire, #3B82F6); }
+.cat-perfumery  { border-top: 2px solid var(--ameza-ruby-dark, #9F1239); }
 
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 1100px) {

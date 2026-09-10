@@ -148,11 +148,26 @@ const ProductCard = ({ id, title, description, price, image, category, rating })
           )}
 
           {/* RATING */}
-          <div className="product-rating">
-            <span className="stars">★★★★★</span>
-            <small>{rating ? Number(rating).toFixed(1) : "4.8"}</small>
-            <em>Customer Rating</em>
-          </div>
+          {(() => {
+            const numRating = Number(rating) > 0 ? Number(rating) : 4.8;
+            const roundedStars = Math.round(Math.min(5, Math.max(1, numRating)));
+            return (
+              <div className="product-rating">
+                <span className="stars" aria-label={`${numRating.toFixed(1)} out of 5 stars`}>
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <span
+                      key={s}
+                      className={s <= roundedStars ? "star-filled" : "star-empty"}
+                    >
+                      {s <= roundedStars ? "★" : "☆"}
+                    </span>
+                  ))}
+                </span>
+                <small>{numRating.toFixed(1)}</small>
+                <em>Customer Rating</em>
+              </div>
+            );
+          })()}
 
           {/* PRICE ROW */}
           <div className="product-price-row">
@@ -161,7 +176,7 @@ const ProductCard = ({ id, title, description, price, image, category, rating })
               <h4 className="product-price">${typeof price === "number" ? price.toFixed(2) : price}</h4>
             </div>
 
-            <span className="price-offer">Best Value</span>
+            <span className="price-offer">Curated</span>
           </div>
 
           {/* SERVICES */}

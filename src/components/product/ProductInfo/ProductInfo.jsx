@@ -116,15 +116,28 @@ const ProductInfo = ({
       </motion.h1>
 
       {/* ── 3. RATING & REVIEWS ── */}
-      <motion.div className="pine-rating-strip" variants={fadeInUp}>
-        <div className="pine-stars">
-          {"★".repeat(5)}
-        </div>
-        <strong className="pine-rating-score">{product.rating ? product.rating.toFixed(1) : "4.8"}</strong>
-        <span className="pine-rating-divider">·</span>
-        <span className="pine-rating-label">Verified Formulation</span>
-        <span className="pine-rating-count">({reviewCount} Reviews)</span>
-      </motion.div>
+      {(() => {
+        const numRating = Number(product.rating) > 0 ? Number(product.rating) : 4.8;
+        const roundedStars = Math.round(Math.min(5, Math.max(1, numRating)));
+        return (
+          <motion.div className="pine-rating-strip" variants={fadeInUp}>
+            <div className="pine-stars" aria-label={`${numRating.toFixed(1)} out of 5 stars`}>
+              {[1, 2, 3, 4, 5].map((s) => (
+                <span
+                  key={s}
+                  className={s <= roundedStars ? "star-filled" : "star-empty"}
+                >
+                  {s <= roundedStars ? "★" : "☆"}
+                </span>
+              ))}
+            </div>
+            <strong className="pine-rating-score">{numRating.toFixed(1)}</strong>
+            <span className="pine-rating-divider">·</span>
+            <span className="pine-rating-label">Verified Formulation</span>
+            <span className="pine-rating-count">({reviewCount} Reviews)</span>
+          </motion.div>
+        );
+      })()}
 
       {/* ── 4. PRODUCT DESCRIPTION ── */}
       <motion.p className="pine-description" variants={fadeInUp}>

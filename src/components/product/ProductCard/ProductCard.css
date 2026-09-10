@@ -233,9 +233,20 @@
 }
 
 .product-rating .stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.product-rating .star-filled {
   color: var(--ameza-ruby, #E11D48);
-  filter: drop-shadow(0 0 4px rgba(225, 29, 72, 0.4));
-  letter-spacing: 1px;
+  filter: drop-shadow(0 0 3px rgba(225, 29, 72, 0.45));
+}
+
+.product-rating .star-empty {
+  color: rgba(218, 200, 195, 0.3);
 }
 
 .product-rating small {
@@ -284,11 +295,13 @@
 
 .price-offer {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 700;
-  color: var(--ameza-emerald, #10B981);
-  background: var(--ameza-emerald-bg, rgba(16, 185, 129, 0.16));
-  border: 1px solid var(--ameza-emerald-border, rgba(16, 185, 129, 0.45));
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ameza-copper, #E67E64);
+  background: var(--ameza-copper-bg, rgba(230, 126, 100, 0.14));
+  border: 1px solid var(--ameza-copper-border, rgba(230, 126, 100, 0.35));
   padding: 3px 8px;
   border-radius: var(--radius-pill);
 }

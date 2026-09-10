@@ -19,6 +19,7 @@ export const Settings = React.lazy(() => import("../../pages/Settings/Settings")
 export const Login = React.lazy(() => import("../../pages/Login/Login"));
 export const Signup = React.lazy(() => import("../../pages/Signup/Signup"));
 export const SingleProduct = React.lazy(() => import("../../pages/SinglePage/SingleProduct"));
+export const Users = React.lazy(() => import("../../pages/Users/Users"));
 export const NotFound = React.lazy(() => import("../../pages/NotFound/NotFound"));
 
 export const AppRouter = () => {
@@ -92,6 +93,14 @@ export const AppRouter = () => {
     {
       path: "/signup",
       element: <Signup />,
+    },
+    {
+      path: "/users",
+      element: <Users />,
+    },
+    {
+      path: "/user",
+      element: <Users />,
     },
     {
       path: "*",
