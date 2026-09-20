@@ -260,22 +260,23 @@
   background: #FFFFFF;
   border: 1px solid var(--border-color, #D8D0C7);
   border-radius: var(--radius-btn, 2px);
-  height: 48px;
-  width: 110px;
-  padding: 4px;
+  height: 56px;
+  width: 120px;
+  padding: 6px 8px;
   box-sizing: border-box;
   flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(48, 46, 42, 0.04);
 }
 
 .pine-qty-btn {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-btn, 2px);
   background: transparent;
   border: none;
   color: var(--text-charcoal, #302E2A);
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,36 +296,40 @@
 
 .pine-qty-num {
   font-family: var(--font-mono, monospace);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--text-charcoal, #302E2A);
+  min-width: 24px;
+  text-align: center;
 }
 
 /* Primary CTA: ADD TO CART */
 .pine-btn-primary-sage {
   flex: 1;
-  min-width: 150px;
-  height: 48px;
+  min-width: 160px;
+  height: 56px;
   background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
   border: none;
   border-radius: var(--radius-btn, 2px);
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   cursor: pointer;
-  transition: background var(--transition-fast, 0.2s ease);
+  transition: background var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
   box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(85, 86, 63, 0.22);
 }
 
 .pine-btn-primary-sage:hover:not(:disabled) {
   background: var(--color-olive, #8A8A68);
+  transform: translateY(-1px);
 }
 
 .pine-btn-primary-sage:disabled {
@@ -335,28 +340,30 @@
 /* Secondary CTA: BUY NOW */
 .pine-btn-accent-apricot {
   flex: 1;
-  min-width: 130px;
-  height: 48px;
+  min-width: 140px;
+  height: 56px;
   background: var(--color-rose, #C9A0A0);
   color: #FFFFFF !important;
   border: none;
   border-radius: var(--radius-btn, 2px);
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   cursor: pointer;
-  transition: opacity var(--transition-fast, 0.2s ease);
+  transition: opacity var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
   box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(201, 160, 160, 0.25);
 }
 
 .pine-btn-accent-apricot:hover:not(:disabled) {
-  opacity: 0.9;
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
 .pine-btn-accent-apricot:disabled {
@@ -435,14 +442,14 @@
 
   .pine-qty-box {
     width: 100%;
-    height: 48px;
+    height: 52px;
   }
 
   .pine-btn-primary-sage,
   .pine-btn-accent-apricot {
     width: 100%;
-    height: 48px;
-    font-size: 13px;
+    height: 56px;
+    font-size: 14px;
   }
 
   .pine-benefits-grid {

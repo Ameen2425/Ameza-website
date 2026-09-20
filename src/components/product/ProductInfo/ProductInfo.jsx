@@ -57,42 +57,11 @@ const ProductInfo = ({
   };
 
   const handleAddToCart = () => {
-    if (cartItem) {
-      dispatch(INC(product.id));
-      addToCart();
-    } else {
-      dispatch(
-        ADD({
-          id: product.id,
-          title: product.title,
-          price: product.price,
-          thumbnail: product.thumbnail,
-          category: product.category,
-        })
-      );
-      for (let i = 1; i < localQty; i++) {
-        dispatch(INC(product.id));
-      }
-      addToCart();
-    }
+    addToCart(localQty);
   };
 
   const handleBuyNow = () => {
-    if (!cartItem) {
-      dispatch(
-        ADD({
-          id: product.id,
-          title: product.title,
-          price: product.price,
-          thumbnail: product.thumbnail,
-          category: product.category,
-        })
-      );
-      for (let i = 1; i < localQty; i++) {
-        dispatch(INC(product.id));
-      }
-    }
-    buyNow();
+    buyNow(localQty);
   };
 
   // Review count based on product ID for consistent boutique realism

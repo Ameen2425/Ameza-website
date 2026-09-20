@@ -24,9 +24,9 @@
 .products-search-wrapper {
   position: relative;
   flex: 1;
-  max-width: 560px;
+  max-width: 580px;
   min-width: 260px;
-  height: 48px;
+  height: 56px;
   background: #FFFFFF;
   border: 1px solid var(--border-color, #D8D0C7);
   border-radius: var(--radius-btn, 2px);
@@ -44,9 +44,9 @@
 
 .products-search-icon {
   position: absolute;
-  left: 16px;
-  width: 18px;
-  height: 18px;
+  left: 18px;
+  width: 20px;
+  height: 20px;
   color: var(--color-olive, #8A8A68);
   pointer-events: none;
 }
@@ -54,12 +54,12 @@
 .products-search-input {
   width: 100%;
   height: 100%;
-  padding: 0 46px 0 46px;
+  padding: 0 48px 0 52px;
   background: transparent;
   border: none;
   outline: none;
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--text-charcoal, #302E2A);
   box-sizing: border-box;
   letter-spacing: 0.01em;
@@ -67,14 +67,14 @@
 
 .products-search-input::placeholder {
   color: var(--text-muted, #77746C);
-  font-size: 13.5px;
+  font-size: 14px;
 }
 
 .products-search-clear {
   position: absolute;
-  right: 14px;
-  width: 24px;
-  height: 24px;
+  right: 16px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--bg-secondary, #EEE7DD);
   border: 1px solid var(--border-color, #D8D0C7);
@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
   transition: all var(--transition-fast, 0.2s ease);
 }
@@ -121,8 +121,8 @@
   background: #FFFFFF;
   border: 1px solid var(--border-color, #D8D0C7);
   border-radius: var(--radius-btn, 2px);
-  padding: 0 14px 0 14px;
-  height: 48px;
+  padding: 0 16px 0 16px;
+  height: 56px;
   box-sizing: border-box;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
   transition: border-color var(--transition-fast, 0.2s ease);
@@ -148,7 +148,7 @@
   border: none;
   color: var(--text-charcoal, #302E2A);
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
   outline: none;
   cursor: pointer;
@@ -173,11 +173,11 @@
   border: 1px solid var(--border-color, #D8D0C7);
   color: var(--text-charcoal, #302E2A);
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
   letter-spacing: 0.04em;
-  padding: 0 18px;
-  height: 48px;
+  padding: 0 20px;
+  height: 56px;
   border-radius: var(--radius-btn, 2px);
   cursor: pointer;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
@@ -571,14 +571,14 @@
   .products-search-wrapper {
     max-width: 100%;
     width: 100%;
-    height: 48px;
+    height: 52px;
   }
   .products-search-icon {
-    left: 14px;
+    left: 16px;
   }
   .products-search-input {
-    font-size: 14px;
-    padding: 0 42px 0 42px;
+    font-size: 14.5px;
+    padding: 0 44px 0 46px;
   }
   .products-toolbar-right {
     justify-content: space-between;
@@ -588,9 +588,9 @@
   .products-sort-wrapper {
     flex: 1;
     justify-content: space-between;
-    height: 48px;
+    height: 52px;
   }
   .btn-toggle-advanced {
-    height: 48px;
+    height: 52px;
   }
 }

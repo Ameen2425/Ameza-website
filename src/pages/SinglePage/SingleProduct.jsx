@@ -104,7 +104,8 @@ const SingleProduct = () => {
   /* =====================================================
      ADD TO CART
   ===================================================== */
-  const addToCart = () => {
+  const addToCart = (quantity = 1) => {
+    const qty = Number(quantity) > 0 ? Number(quantity) : 1;
     dispatch(
       ADD({
         id: product.id,
@@ -112,6 +113,7 @@ const SingleProduct = () => {
         price: product.price,
         thumbnail: product.thumbnail || (product.images && product.images[0]),
         category: product.category,
+        quantity: qty,
       })
     );
     dispatch(
@@ -130,7 +132,8 @@ const SingleProduct = () => {
   /* =====================================================
      BUY NOW
   ===================================================== */
-  const buyNow = () => {
+  const buyNow = (quantity = 1) => {
+    const qty = Number(quantity) > 0 ? Number(quantity) : 1;
     dispatch(
       ADD({
         id: product.id,
@@ -138,6 +141,7 @@ const SingleProduct = () => {
         price: product.price,
         thumbnail: product.thumbnail || (product.images && product.images[0]),
         category: product.category,
+        quantity: qty,
       })
     );
     navigate("/checkout");

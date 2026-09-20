@@ -361,58 +361,207 @@
   color: var(--ameza-error, #B05353);
 }
 
-/* ── Mobile Bottom Navigation Dock (Curved Floating Dock) ─ */
+/* ── Mobile Bottom Navigation Dock (Orbit Navigation Style) ─ */
 .mobile-bottom-nav {
   display: none;
   position: fixed;
-  bottom: 12px;
+  bottom: 16px;
   left: 14px;
   right: 14px;
-  height: 56px;
+  height: 66px;
   background: rgba(246, 241, 234, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--ameza-border, #D8D0C7);
-  border-radius: 28px;
-  padding: 0 10px;
-  z-index: 999;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(216, 208, 199, 0.9);
+  border-radius: 36px;
+  padding: 4px 6px;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(48, 46, 42, 0.12), 0 2px 8px rgba(48, 46, 42, 0.05);
+}
+
+.mobile-orbit-nav-inner {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: space-around;
-  box-sizing: border-box;
-  box-shadow: 0 8px 24px rgba(48, 46, 42, 0.1);
+  width: 100%;
+  height: 100%;
 }
 
 .mobile-nav-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3px;
   text-decoration: none;
-  color: var(--ameza-charcoal, #302E2A);
+  color: var(--ameza-text-muted, #77746C);
   flex: 1;
   height: 100%;
-  transition: color var(--transition-fast);
+  padding: 3px 0;
+  box-sizing: border-box;
+  background: transparent;
+  transition: color var(--transition-fast, 0.2s ease);
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.mobile-nav-item:hover,
 .mobile-nav-item.active {
-  color: var(--ameza-olive, #8A8A68);
+  color: var(--ameza-olive-dark, #55563F);
 }
 
 .mobile-nav-icon-wrap {
+  position: relative;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  z-index: 3;
+}
+
+.mobile-icon-glyph {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+.mobile-nav-item.active .mobile-icon-glyph {
+  transform: translateY(-1px) scale(1.05);
+  color: var(--ameza-olive-dark, #55563F);
+}
+
+.mobile-icon-glyph svg {
+  filter: drop-shadow(0 1px 2px rgba(85, 86, 63, 0.08));
+}
+
+/* ── Elevated Luxury Celestial Orbit System ───────────── */
+.mobile-orbit-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Breathing atmospheric nebula aura */
+.orbit-aura-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 160, 160, 0.28) 0%, rgba(138, 138, 104, 0.14) 50%, transparent 75%);
+  animation: orbitAuraPulse 3.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Core soft focal glow behind active planet icon */
+.orbit-core-glow {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 241, 234, 0.95) 0%, rgba(201, 160, 160, 0.22) 65%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Outer harmonic cosmic ring (fine trajectory) */
+.orbit-outer-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid rgba(138, 138, 104, 0.22);
+  pointer-events: none;
+}
+
+/* Primary rotating dashed planetary track */
+.orbit-primary-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.4px dashed rgba(85, 86, 63, 0.72);
+  animation: orbitClockwise 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Revolving satellite bead along the orbit perimeter */
+.orbit-satellite-bead {
+  position: absolute;
+  top: -3px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.orbit-satellite-glow {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 160, 160, 0.95) 0%, rgba(138, 138, 104, 0.4) 60%, transparent 85%);
+  pointer-events: none;
+}
+
+.orbit-satellite-core {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--ameza-olive-dark, #55563F);
+  box-shadow: 0 0 6px 1px rgba(201, 160, 160, 0.9);
+}
+
+@keyframes orbitClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitAuraPulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
 }
 
 .mobile-nav-label {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
+  line-height: 1;
+  transition: font-weight 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-item.active .mobile-nav-label {
+  font-weight: 700;
+  color: var(--ameza-olive-dark, #55563F);
+}
+
+/* Sub-label celestial anchor pearl dot */
+.mobile-orbit-anchor-dot {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: var(--ameza-olive-dark, #55563F);
+  box-shadow: 0 0 5px rgba(201, 160, 160, 0.9);
+  margin-top: 1px;
+  pointer-events: none;
 }
 
 /* ── Media Queries ────────────────────────────────────── */

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { ADD } from "../../../Redux/Features/cart/CartSlice";
 import { addToast } from "../../../Redux/Features/ui/uiSlice";
-import LazyImage from "../../common/LazyImage/LazyImage";
 import "./ProductCard.css";
 
 const ProductCard = ({ id, title, description, price, image, category, rating }) => {
@@ -88,10 +87,11 @@ const ProductCard = ({ id, title, description, price, image, category, rating })
       <Link to={`/products/${id}`} className="editorial-product-card">
         {/* ── 1. IMAGE CONTAINER ── */}
         <div className="product-image-container">
-          <LazyImage
+          <img
             src={image}
-            className="product-image"
             alt={title}
+            className="product-image"
+            loading="lazy"
           />
 
           {/* Wishlist Button (Top-Right) */}

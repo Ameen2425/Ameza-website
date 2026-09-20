@@ -8,19 +8,20 @@ const cartSlice = createSlice({
   reducers: {
     ADD: (state, action) => {
       let item = action.payload;
+      let qtyToAdd = item.quantity && Number(item.quantity) > 0 ? Number(item.quantity) : 1;
 
-      let existingItem = state.find((pro) => pro.id === item.id)
+      let existingItem = state.find((pro) => pro.id === item.id);
 
       if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += qtyToAdd;
       } else {
         state.push({
           ...item,
-          quantity: 1,
+          quantity: qtyToAdd,
         });
       }
 
-      localStorage.setItem("cartData",JSON.stringify(state));
+      localStorage.setItem("cartData", JSON.stringify(state));
     },
 
     REMOVE: (state, action) => {

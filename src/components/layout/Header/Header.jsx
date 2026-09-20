@@ -299,51 +299,90 @@ const Header = () => {
         </div>
       </motion.header>
 
-      {/* MOBILE BOTTOM FLOATING DOCK (ICON ONLY EDITORIAL DOCK) */}
+      {/* MOBILE BOTTOM FLOATING DOCK (ORBIT NAVIGATION STYLE) */}
       <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
-        {mobileNavLinks.map((item) => {
-          const isActive = location.pathname.startsWith(item.path);
+        <div className="mobile-orbit-nav-inner">
+          {mobileNavLinks.map((item) => {
+            const isActive = item.path === "/home"
+              ? (location.pathname === "/home" || location.pathname === "/" || location.pathname === "/landing")
+              : location.pathname.startsWith(item.path);
 
-          return (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={`mobile-nav-item ${isActive ? "active" : ""}`}
-              title={item.name}
-              aria-label={item.name}
-            >
-              <div className="mobile-nav-icon-wrap">
-                {item.name === "Home" && (
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                  </svg>
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={`mobile-nav-item ${isActive ? "active" : ""}`}
+                title={item.name}
+                aria-label={item.name}
+              >
+                <div className="mobile-nav-icon-wrap">
+                  {isActive && (
+                    <motion.div
+                      layoutId="mobileOrbitActiveStage"
+                      className="mobile-orbit-stage"
+                      transition={{ type: "spring", stiffness: 350, damping: 28 }}
+                    >
+                      {/* Atmospheric nebula aura */}
+                      <div className="orbit-aura-pulse" />
+                      <div className="orbit-core-glow" />
+
+                      {/* Outer harmonic cosmic ring */}
+                      <div className="orbit-outer-ring" />
+
+                      {/* Primary rotating orbit track with glowing satellite bead */}
+                      <div className="orbit-primary-ring">
+                        <div className="orbit-satellite-bead">
+                          <span className="orbit-satellite-glow" />
+                          <span className="orbit-satellite-core" />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  <div className="mobile-icon-glyph">
+                    {item.name === "Home" && (
+                      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                      </svg>
+                    )}
+                    {item.name === "Products" && (
+                      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                      </svg>
+                    )}
+                    {item.name === "Deals" && (
+                      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                      </svg>
+                    )}
+                    {item.name === "About" && (
+                      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                      </svg>
+                    )}
+                  </div>
+                </div>
+
+                <span className="mobile-nav-label">{item.name}</span>
+
+                {/* Sub-label celestial active anchor dot */}
+                {isActive && (
+                  <motion.span
+                    layoutId="mobileActiveAnchorDot"
+                    className="mobile-orbit-anchor-dot"
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
                 )}
-                {item.name === "Products" && (
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7"/>
-                    <rect x="14" y="3" width="7" height="7"/>
-                    <rect x="14" y="14" width="7" height="7"/>
-                    <rect x="3" y="14" width="7" height="7"/>
-                  </svg>
-                )}
-                {item.name === "Deals" && (
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                  </svg>
-                )}
-                {item.name === "About" && (
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="12" y1="16" x2="12" y2="12"/>
-                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                  </svg>
-                )}
-              </div>
-              <span className="mobile-nav-label">{item.name}</span>
-            </NavLink>
-          );
-        })}
+              </NavLink>
+            );
+          })}
+        </div>
       </nav>
 
       {/* Global Predictive Search Overlay */}
