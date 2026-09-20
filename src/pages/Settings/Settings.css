@@ -1,21 +1,21 @@
 /* =========================================================
-   AMEZA SETTINGS PAGE STYLES
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA SETTINGS PAGE (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal • Rose
    ========================================================= */
 
 .settings-page-root {
   min-height: 85vh;
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
+  background-color: var(--bg-primary, #F6F1EA);
+  color: var(--text-charcoal, #302E2A);
   padding-top: calc(var(--header-height-desktop, 76px) + 24px);
   padding-bottom: clamp(60px, 8vw, 100px);
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
   box-sizing: border-box;
 }
 
 .settings-container {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -27,29 +27,28 @@
 }
 
 .btn-back-account {
-  background: transparent;
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.25));
-  color: var(--ameza-text-secondary, #DAC8C3);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
   padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 13px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
   font-weight: 600;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-back-account:hover {
-  border-color: var(--ameza-ruby, #E11D48);
-  color: #FFFFFF;
-  background: rgba(225, 29, 72, 0.12);
+  border-color: var(--color-olive-dark, #55563F);
+  background: var(--bg-secondary, #EEE7DD);
 }
 
 .nav-meta {
   font-family: var(--font-mono, monospace);
   font-size: 11px;
-  color: var(--ameza-text-muted, #9E8B89);
-  letter-spacing: 0.1em;
+  color: var(--text-muted, #77746C);
+  letter-spacing: 0.08em;
 }
 
 .settings-header {
@@ -58,11 +57,11 @@
 
 .settings-eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--ameza-ruby, #E11D48);
+  letter-spacing: 0.16em;
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 6px;
   text-transform: uppercase;
 }
@@ -70,15 +69,15 @@
 .settings-title {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 8px 0;
 }
 
 .settings-subtitle {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 14.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
 }
 
@@ -86,30 +85,30 @@
 .settings-cards-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .settings-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.25));
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(24px, 4vw, 32px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
 }
 
 .card-title {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  margin: 0 0 8px 0;
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
+  margin: 0 0 6px 0;
 }
 
 .card-desc {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  color: var(--ameza-text-muted, #9E8B89);
-  margin: 0 0 24px 0;
+  color: var(--text-muted, #77746C);
+  margin: 0 0 22px 0;
   line-height: 1.5;
 }
 
@@ -117,98 +116,96 @@
 .settings-toggle-group {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .toggle-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-  background: #150911;
-  border: 1px solid rgba(225, 29, 72, 0.2);
-  border-radius: var(--radius-md, 14px);
+  padding: 14px 18px;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   gap: 16px;
 }
 
 .toggle-info {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .toggle-info strong {
-  font-family: var(--font-body);
-  font-size: 14px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 13.5px;
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .toggle-info span {
-  font-family: var(--font-body);
-  font-size: 12.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12px;
+  color: var(--text-muted, #77746C);
 }
 
 .toggle-switch {
-  width: 48px;
-  height: 26px;
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--border-color, #D8D0C7);
+  border: none;
   position: relative;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
   padding: 0;
   outline: none;
   flex-shrink: 0;
 }
 
 .toggle-switch.active {
-  background: var(--ameza-ruby, #E11D48);
-  border-color: var(--ameza-ruby-bright, #FB7185);
-  box-shadow: 0 0 14px rgba(225, 29, 72, 0.55);
+  background: var(--color-olive-dark, #55563F);
 }
 
 .toggle-slider {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #FFFFFF;
   position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: transform var(--transition-fast);
+  top: 3px;
+  left: 3px;
+  transition: transform var(--transition-fast, 0.2s ease);
 }
 
 .toggle-switch.active .toggle-slider {
-  transform: translateX(22px);
+  transform: translateX(20px);
 }
 
 /* ── Section 2: Display & Regional Preferences ────────── */
 .settings-options-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 14px;
 }
 
 .setting-choice-block {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  background: #150911;
-  border: 1px solid rgba(225, 29, 72, 0.2);
-  border-radius: var(--radius-md, 14px);
-  padding: 16px 20px;
+  gap: 6px;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  padding: 14px 18px;
 }
 
 .choice-label {
-  font-family: var(--font-body);
-  font-size: 11px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .theme-indicator-pill,
@@ -219,70 +216,69 @@
 }
 
 .theme-color {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   display: inline-block;
 }
 
-.theme-color.ruby { background: #E11D48; }
-.theme-color.copper { background: #E67E64; }
+.theme-color.ruby { background: var(--color-olive, #8A8A68); }
+.theme-color.copper { background: var(--color-rose, #C9A0A0); }
 
 .theme-indicator-pill strong,
 .currency-pill strong {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
 }
 
 /* ── Section 3: Data Management / Danger Zone ─────────── */
 .danger-buttons-row {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .btn-action-neutral {
-  background: rgba(225, 29, 72, 0.12);
-  border: 1px solid rgba(225, 29, 72, 0.35);
-  color: var(--ameza-ruby-bright, #FB7185);
-  padding: 12px 24px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
+  padding: 10px 22px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-action-neutral:hover {
-  background: var(--ameza-ruby, #E11D48);
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
+  background: var(--bg-secondary, #EEE7DD);
+  border-color: var(--color-olive-dark, #55563F);
 }
 
 .btn-action-danger {
-  background: rgba(225, 29, 72, 0.2);
-  border: 1px solid var(--ameza-ruby, #E11D48);
-  color: #FFFFFF;
-  padding: 12px 24px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  background: rgba(201, 160, 160, 0.18);
+  border: 1px solid var(--color-rose, #C9A0A0);
+  color: var(--text-charcoal, #302E2A);
+  padding: 10px 22px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-action-danger:hover {
-  background: var(--ameza-ruby, #E11D48);
-  box-shadow: 0 4px 18px rgba(225, 29, 72, 0.6);
+  background: var(--color-rose, #C9A0A0);
+  color: #FFFFFF;
 }
 
 /* ── Toast Notification ───────────────────────────────── */
@@ -291,24 +287,24 @@
   top: 96px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-ruby, #E11D48);
-  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 12px 24px;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--ameza-text, #FAF7F2);
-  font-family: var(--font-body);
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(225, 29, 72, 0.35);
+  box-shadow: var(--shadow-md, 0 4px 14px rgba(48, 46, 42, 0.08));
   z-index: 99999;
   max-width: 90vw;
 }
 
 .toast-icon {
-  color: var(--ameza-ruby-bright, #FB7185);
+  color: var(--color-olive, #8A8A68);
 }
 
 /* ── Responsive ───────────────────────────────────────── */

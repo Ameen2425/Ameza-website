@@ -1,12 +1,13 @@
 /* =========================================================
-   AMEZA ABOUT PAGE WRAPPER (OBSIDIAN & 24K IMPERIAL GOLD)
+   AMEZA ABOUT PAGE WRAPPER (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .about-page {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
+  background-color: var(--ameza-bg, #F6F1EA);
+  color: var(--ameza-text, #302E2A);
   box-sizing: border-box;
   overflow-x: hidden;
 }

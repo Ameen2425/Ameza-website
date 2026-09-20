@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./OrderDetails.css";
+import OrderInvoiceModal from "../../components/orders/OrderInvoiceModal/OrderInvoiceModal";
 
 const OrderDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isInvoiceOpen, setIsInvoiceOpen] = useState(false);
 
   useEffect(() => {
     const orders = JSON.parse(localStorage.getItem("ameza_orders")) || [];
@@ -80,9 +82,25 @@ const OrderDetails = () => {
             <p className="order-date-meta">Placed on {formattedDate}</p>
           </div>
 
-          <div className="order-status-badge">
-            <span className="status-indicator" />
-            <strong>{order.status || "Order Placed"}</strong>
+          <div className="order-header-actions-group">
+            <button
+              type="button"
+              className="btn-export-invoice"
+              onClick={() => setIsInvoiceOpen(true)}
+              title="Export / Print Official Invoice"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="6 9 6 2 18 2 18 9"/>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <rect x="6" y="14" width="12" height="8"/>
+              </svg>
+              <span>Export / Print Invoice</span>
+            </button>
+
+            <div className="order-status-badge">
+              <span className="status-indicator" />
+              <strong>{order.status || "Order Placed"}</strong>
+            </div>
           </div>
         </div>
 
@@ -196,6 +214,13 @@ const OrderDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Official Atelier Invoice Modal */}
+      <OrderInvoiceModal
+        isOpen={isInvoiceOpen}
+        onClose={() => setIsInvoiceOpen(false)}
+        order={order}
+      />
     </div>
   );
 };

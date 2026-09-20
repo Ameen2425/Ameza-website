@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
-  <!-- Symbol Icon -->
+  <!-- Symbol Icon (Quiet Luxury Deep Olive & Rose) -->
   <g transform="translate(10, 8)">
-    <rect width="64" height="64" rx="14" fill="#38202B"/>
-    <rect x="1" y="1" width="62" height="62" rx="13" stroke="#C5A059" stroke-opacity="0.5" stroke-width="1.5"/>
-    <path d="M32 14 L48 48 H39.5 L32 33 L24.5 48 H16 L32 14Z" fill="#FAF6F0"/>
-    <path d="M32 25 L38 39 H26 L32 25Z" fill="#38202B"/>
-    <path d="M22 41 L32 31 L42 41 L37.5 41 L32 36 L26.5 41 H22Z" fill="#C5A059"/>
+    <rect width="64" height="64" rx="10" fill="#55563F"/>
+    <rect x="2" y="2" width="60" height="60" rx="8" stroke="#8A8A68" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M32 14 L48 48 H39.5 L32 33 L24.5 48 H16 L32 14Z" fill="#F6F1EA"/>
+    <path d="M32 25 L38 39 H26 L32 25Z" fill="#55563F"/>
+    <path d="M22 41 L32 31 L42 41 L37.5 41 L32 36 L26.5 41 H22Z" fill="#C9A0A0"/>
   </g>
-  <!-- Wordmark AMEZA in Playfair Display style -->
-  <text x="88" y="48" fill="#FAF6F0" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" letter-spacing="0.08em">AMEZA</text>
-  <!-- Accent Liquid Champagne Gold Dot -->
-  <circle cx="242" cy="45" r="3" fill="#C5A059" />
+  <!-- Wordmark AMEZA in Warm Ivory for Dark Backdrops -->
+  <text x="88" y="49" fill="#F6F1EA" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="0.16em">AMEZA</text>
+  <!-- Accent Muted Rose Dot -->
+  <circle cx="242" cy="46" r="3.5" fill="#C9A0A0" />
 </svg>

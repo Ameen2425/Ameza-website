@@ -1,6 +1,7 @@
 /* =========================================================
    AMEZA — GLOBAL DESIGN SYSTEM ENTRY
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   Quiet Luxury / Modern Editorial E-Commerce
+   Warm Ivory, Soft Cream, Olive, Rose & Charcoal
    ========================================================= */
 
 @import "./styles/variables.css";
@@ -10,48 +11,49 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
+  background-color: var(--ameza-bg, #F6F1EA);
+  color: var(--ameza-text, #302E2A);
 }
 
 body {
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
+  background-color: var(--ameza-bg, #F6F1EA);
+  color: var(--ameza-text, #302E2A);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: var(--font-body, "Manrope", sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Custom Luxury Velvet Scrollbar ───────────────────── */
+/* ── Custom Editorial Quiet Luxury Scrollbar ──────────── */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ameza-bg, #0D070B);
+  background: var(--ameza-bg, #F6F1EA);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(225, 29, 72, 0.35);
-  border-radius: var(--radius-pill, 999px);
-  border: 2px solid var(--ameza-bg, #0D070B);
+  background: rgba(138, 138, 104, 0.45); /* Olive */
+  border-radius: var(--radius-xs, 2px);
+  border: 1px solid var(--ameza-bg, #F6F1EA);
   transition: background var(--transition-fast, 0.2s);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ameza-primary, #E11D48);
+  background: var(--ameza-olive, #8A8A68);
 }
 
-/* ── Luxury Text Selection ────────────────────────────── */
+/* ── Editorial Text Selection ─────────────────────────── */
 ::selection {
-  background: rgba(225, 29, 72, 0.35);
-  color: #FFFFFF;
+  background: rgba(201, 160, 160, 0.35); /* Soft Rose */
+  color: #302E2A;
 }
 
 ::-moz-selection {
-  background: rgba(225, 29, 72, 0.35);
-  color: #FFFFFF;
+  background: rgba(201, 160, 160, 0.35);
+  color: #302E2A;
 }

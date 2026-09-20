@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA BRAND LOGO (OBSIDIAN VELVET & CRIMSON RUBY RED)
+   AMEZA BRAND LOGO (QUIET LUXURY EDITORIAL)
+   Warm Ivory, Olive, Rose & Charcoal
    ========================================================= */
 
 .ameza-brand-logo {
@@ -11,37 +12,36 @@
 }
 
 .ameza-logo-symbol-wrap {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
 .ameza-logo-symbol {
   width: 100%;
   height: 100%;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast, 0.2s);
 }
 
 .ameza-brand-logo:hover .ameza-logo-symbol {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 .ameza-wordmark-wrap {
   display: inline-flex;
   align-items: baseline;
-  gap: 3px;
+  gap: 4px;
 }
 
 .ameza-wordmark {
-  font-family: var(--font-heading, var(--font-display));
-  font-size: 22px;
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 21px;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--ameza-text, #FAF7F2);
+  letter-spacing: 0.16em;
+  color: var(--ameza-charcoal, #302E2A);
   line-height: 1;
 }
 
@@ -49,31 +49,30 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--ameza-ruby, #E11D48);
-  box-shadow: 0 0 10px rgba(225, 29, 72, 0.9);
+  background: var(--ameza-rose, #C9A0A0);
   display: inline-block;
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
-/* Light / Drawer Variant */
+/* Light / Dark Background Variant */
 .ameza-brand-logo.is-light .ameza-wordmark {
-  color: var(--ameza-text, #FAF7F2);
+  color: #F6F1EA;
 }
 
 /* Compact Variant */
 .ameza-brand-logo.is-compact .ameza-logo-symbol-wrap {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
 }
 
 .ameza-brand-logo.is-compact .ameza-wordmark {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 /* ── 320px – 360px Mobile Adaptations ─────────────────── */
 @media (max-width: 360px) {
   .ameza-brand-logo {
-    gap: 7px;
+    gap: 8px;
   }
 
   .ameza-logo-symbol-wrap {
@@ -82,8 +81,8 @@
   }
 
   .ameza-wordmark {
-    font-size: 16px;
-    letter-spacing: 0.08em;
+    font-size: 17px;
+    letter-spacing: 0.1em;
   }
 
   .ameza-brand-logo.is-compact .ameza-logo-symbol-wrap {

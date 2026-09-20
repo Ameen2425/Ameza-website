@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import ProductFilters from "../ProductFilters/ProductFilters";
@@ -15,10 +16,16 @@ const excludedCategories = [
 ];
 
 const ProductList = () => {
+  const [searchParams] = useSearchParams();
+  const urlSearch = searchParams.get("search") || "";
+
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(urlSearch);
   const [category, setCategory] = useState("");
   const [sortBy, setSortBy] = useState("featured");
+  const [priceRange, setPriceRange] = useState([0, 2000]);
+  const [inStockOnly, setInStockOnly] = useState(false);
+  const [minRating, setMinRating] = useState(0);
   const [categoryList, setCategoryList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -72,10 +79,29 @@ const ProductList = () => {
   }, [category, search]);
 
   // =========================
+  // Advanced Filter Pipeline (Price Range, In Stock, Rating)
+  // =========================
+  const filteredProducts = useMemo(() => {
+    return products.filter((p) => {
+      const price = parseFloat(p.price) || 0;
+      if (price < priceRange[0] || (priceRange[1] < 2000 && price > priceRange[1])) {
+        return false;
+      }
+      if (inStockOnly && (p.stock !== undefined && p.stock <= 0)) {
+        return false;
+      }
+      if (minRating > 0 && (p.rating || 0) < minRating) {
+        return false;
+      }
+      return true;
+    });
+  }, [products, priceRange, inStockOnly, minRating]);
+
+  // =========================
   // Sorting Pipeline
   // =========================
   const sortedProducts = useMemo(() => {
-    let list = [...products];
+    let list = [...filteredProducts];
 
     switch (sortBy) {
       case "price-low":
@@ -90,7 +116,17 @@ const ProductList = () => {
       default:
         return list;
     }
-  }, [products, sortBy]);
+  }, [filteredProducts, sortBy]);
+
+  const handleResetFilters = () => {
+    setSearch("");
+    setCategory("");
+    setSortBy("featured");
+    setPriceRange([0, 2000]);
+    setInStockOnly(false);
+    setMinRating(0);
+    setPage(1);
+  };
 
   // =========================
   // Pagination Calculations
@@ -135,7 +171,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className="products-page">
+    <div className="products-catalog-wrapper">
       {/* ── 1. EDITORIAL PRODUCT HERO ───────────────────────── */}
       <section className="products-hero-section">
         <div className="products-hero-container">
@@ -145,13 +181,28 @@ const ProductList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="products-hero-badge">THE AMEZA COLLECTION</span>
+            {/* Small Breadcrumb */}
+            <div className="products-breadcrumb">
+              <Link to="/home" className="breadcrumb-link">HOME</Link>
+              <span className="breadcrumb-sep">/</span>
+              <span className="breadcrumb-current">PRODUCTS</span>
+            </div>
+
+            {/* Edition Flagship Tag */}
+            <div className="products-hero-edition-tag">
+              <span className="edition-dot">✦</span>
+              <span>EDITION N° 04 · DIGITAL FLAGSHIP</span>
+              <span className="edition-sep">/</span>
+              <span className="edition-season">AUTUMN 2026</span>
+            </div>
+
             <h1 className="products-hero-title">
-              Explore <span>Luxury Creations.</span>
+              Curated for your<br />
+              <span className="hero-title-italic">everyday rituals.</span>
             </h1>
             <p className="products-hero-desc">
-              Discover our curated catalog of 100+ fine creations, haute perfumery, luxury timepieces,
-              bespoke cosmetics, and designer accessories.
+              Discover our considered collection of verified luxury creations, haute perfumery, timepieces,
+              and design essentials crafted for enduring style and provenance.
             </p>
 
             <div className="products-hero-metrics">
@@ -166,15 +217,47 @@ const ProductList = () => {
               </div>
               <div className="metric-sep" />
               <div className="hero-metric-item">
-                <strong>50+</strong>
-                <span>Atelier Brands</span>
+                <strong>Atelier</strong>
+                <span>Direct Dispatch</span>
+              </div>
+              <div className="metric-sep desktop-only-sep" />
+              <div className="hero-metric-item desktop-only-item">
+                <strong>Geneva · Paris</strong>
+                <span>Origin Sourcing</span>
+              </div>
+            </div>
+
+            {/* Quick Atelier Category Selection */}
+            <div className="products-hero-quick-tags">
+              <span className="quick-tags-label">EXPLORE ATELIER:</span>
+              <div className="quick-tags-list">
+                {[
+                  { label: "All Creations", val: "" },
+                  { label: "Haute Fragrance", val: "fragrances" },
+                  { label: "Fine Horology", val: "mens-watches" },
+                  { label: "Atelier Bags", val: "womens-bags" },
+                  { label: "Fine Jewellery", val: "womens-jewellery" },
+                  { label: "Botanical Care", val: "skin-care" },
+                ].map((tag) => (
+                  <button
+                    key={tag.label}
+                    type="button"
+                    className={`hero-tag-chip ${category === tag.val ? "is-active" : ""}`}
+                    onClick={() => {
+                      setCategory(tag.val);
+                      setPage(1);
+                    }}
+                  >
+                    {tag.label}
+                  </button>
+                ))}
               </div>
             </div>
           </motion.div>
 
           <motion.div
             className="products-hero-media"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
@@ -184,7 +267,13 @@ const ProductList = () => {
                 alt="AMEZA Curated Luxury Still Life"
                 className="products-hero-img"
               />
-              <div className="products-hero-image-overlay" />
+              <div className="hero-image-overlay-badge">
+                <span className="badge-spark">✦</span>
+                <span>ATELIER STILL LIFE · SERIES I</span>
+              </div>
+              <div className="hero-image-provenance-tag">
+                <span>VERIFIED LUXURY EDIT</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -204,6 +293,13 @@ const ProductList = () => {
         setPage={setPage}
         categoryList={categoryList}
         totalCount={sortedProducts.length}
+        priceRange={priceRange}
+        setPriceRange={setPriceRange}
+        inStockOnly={inStockOnly}
+        setInStockOnly={setInStockOnly}
+        minRating={minRating}
+        setMinRating={setMinRating}
+        onResetFilters={handleResetFilters}
       />
 
       {/* ── 3. PRODUCT CATALOG GRID ─────────────────────────── */}
@@ -233,18 +329,13 @@ const ProductList = () => {
             <span className="empty-icon">✦</span>
             <h2>No Pieces Found</h2>
             <p>
-              We couldn't find any creations matching your search or active category.
+              We couldn't find any creations matching your search, price parameters, or active category.
               Try adjusting your query or resetting filters.
             </p>
             <button
               type="button"
               className="btn-clear-empty"
-              onClick={() => {
-                setSearch("");
-                setCategory("");
-                setSortBy("featured");
-                setPage(1);
-              }}
+              onClick={handleResetFilters}
             >
               Reset All Filters
             </button>

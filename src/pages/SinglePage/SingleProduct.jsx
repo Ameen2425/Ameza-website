@@ -4,11 +4,13 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { ADD } from "../../Redux/Features/cart/CartSlice";
+import { addToast } from "../../Redux/Features/ui/uiSlice";
 import "./SingleProduct.css";
 
 import ProductGallery from "../../components/product/ProductGallery/ProductGallery";
 import ProductInfo from "../../components/product/ProductInfo/ProductInfo";
 import ProductDetails from "../../components/product/ProductDetails/ProductDetails";
+import ProductReviews from "../../components/product/ProductReviews/ProductReviews";
 import RelatedProducts from "../../components/product/RelatedProducts/RelatedProducts";
 import TrustBar from "../../components/product/TrustBar/TrustBar";
 
@@ -110,6 +112,16 @@ const SingleProduct = () => {
         price: product.price,
         thumbnail: product.thumbnail || (product.images && product.images[0]),
         category: product.category,
+      })
+    );
+    dispatch(
+      addToast({
+        type: "cart",
+        title: "Acquisition Added",
+        message: `"${product.title}" has been added to your atelier bag ($${Number(product.price || 0).toFixed(2)}).`,
+        thumbnail: product.thumbnail || (product.images && product.images[0]),
+        actionLabel: "Review Bag",
+        actionPath: "/cart",
       })
     );
     showToast(`✓ "${product.title}" added to your cart!`);
@@ -236,7 +248,12 @@ const SingleProduct = () => {
         <ProductDetails product={product} />
 
         {/* =================================================
-            4. YOU MAY ALSO LIKE (RELATED PRODUCTS)
+            4. PATRON REVIEWS & EVALUATIONS
+        ================================================= */}
+        <ProductReviews product={product} />
+
+        {/* =================================================
+            5. YOU MAY ALSO LIKE (RELATED PRODUCTS)
         ================================================= */}
         <RelatedProducts
           currentCategory={product.category}
@@ -245,7 +262,7 @@ const SingleProduct = () => {
         />
 
         {/* =================================================
-            5. TRUST & CONCIERGE BAR
+            6. TRUST & CONCIERGE BAR
         ================================================= */}
         <TrustBar />
       </motion.main>

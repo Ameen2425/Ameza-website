@@ -1,18 +1,19 @@
 /* =========================================================
-   FULLSCREEN IMAGE MOMENT (SECTION 05) — VELVET OBSIDIAN & GOLD
+   FULLSCREEN IMAGE MOMENT (SECTION 05) — QUIET LUXURY
+   Refined editorial moment, restrained contrast
    ========================================================= */
 
 .image-moment-section {
   position: relative;
-  min-height: 75vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--ameza-bg, #0D070B);
+  background: var(--color-surface, #EEE7DD);
+  border-bottom: 1px solid var(--color-hairline, #D8D0C7);
 }
 
-/* Background image with slow parallax scale */
 .image-moment-bg {
   position: absolute;
   inset: 0;
@@ -20,37 +21,21 @@
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
-  transform: scale(1.06);
-  transition: transform 16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
-  filter: brightness(0.78) saturate(0.92);
+  transform: scale(1.03);
+  transition: transform 12s ease-out;
+  filter: brightness(0.85);
 }
 
 .image-moment-section:hover .image-moment-bg {
   transform: scale(1.0);
 }
 
-/* Multi-layer luxury overlay */
+/* Subtle overlay only for text readability */
 .image-moment-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(13, 7, 11, 0.65) 0%,
-      rgba(13, 7, 11, 0.25) 35%,
-      rgba(13, 7, 11, 0.25) 65%,
-      rgba(13, 7, 11, 0.75) 100%
-    );
+  background: rgba(48, 46, 42, 0.35);
   z-index: 2;
-}
-
-/* Vignette corners */
-.image-moment-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(13, 7, 11, 0.6) 100%);
 }
 
 /* ── Text Content ──────────────────────────────────────── */
@@ -64,33 +49,28 @@
 
 .image-moment-heading {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(40px, 6.5vw, 96px);
-  font-weight: 700;
-  line-height: 1.0;
+  font-size: clamp(38px, 5.5vw, 82px);
+  font-weight: 400;
+  line-height: 1.05;
   letter-spacing: -0.025em;
-  color: var(--ameza-text, #FAF7F2);
-  margin: 0 0 clamp(20px, 3.5vh, 32px) 0;
-  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  margin: 0 0 clamp(16px, 2.5vh, 28px) 0;
 }
 
 .image-moment-heading em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   display: block;
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 2px 20px rgba(229, 184, 59, 0.3));
+  color: #F6F1EA;
 }
 
 .image-moment-sub {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: #F6F1EA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,16 +82,7 @@
   content: '';
   width: 28px;
   height: 1px;
-  background: var(--ameza-gold, #E5B83B);
+  background: #F6F1EA;
   opacity: 0.6;
 }
 
-/* ── Mobile ────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .image-moment-section {
-    min-height: 65vh;
-  }
-  .image-moment-heading {
-    font-size: clamp(36px, 12vw, 60px);
-  }
-}

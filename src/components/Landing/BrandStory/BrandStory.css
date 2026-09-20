@@ -1,30 +1,14 @@
 /* =========================================================
-   TYPOGRAPHIC INTERLUDE (SECTION 08) — FIND WHAT STAYS
-   VELVET OBSIDIAN & 24K GOLD LUXURY SYSTEM
+   TYPOGRAPHIC INTERLUDE (SECTION 08) — QUIET LUXURY
+   Warm Ivory, Charcoal, Deep Olive & Rose
    ========================================================= */
 
 .typo-interlude-section {
-  background: var(--ameza-bg-secondary, #140A10);
-  padding: clamp(100px, 18vh, 220px) clamp(24px, 6vw, 80px);
+  background: var(--color-bg, #F6F1EA);
+  padding: clamp(80px, 14vh, 160px) clamp(24px, 6vw, 80px);
   overflow: hidden;
   position: relative;
-}
-
-/* Dramatic large ghost text in background */
-.typo-interlude-section::before {
-  content: 'STAY';
-  position: absolute;
-  right: -2%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(200px, 28vw, 360px);
-  font-weight: 700;
-  line-height: 1;
-  color: rgba(229, 184, 59, 0.025);
-  letter-spacing: -0.05em;
-  pointer-events: none;
-  user-select: none;
+  border-bottom: 1px solid var(--color-hairline, #D8D0C7);
 }
 
 .typo-interlude-inner {
@@ -39,48 +23,38 @@
 
 .typo-interlude-heading {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(64px, 13vw, 180px);
-  font-weight: 700;
-  line-height: 0.86;
+  font-size: clamp(56px, 11vw, 140px);
+  font-weight: 400;
+  line-height: 0.92;
   letter-spacing: -0.04em;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--color-charcoal, #302E2A);
   margin: 0;
   flex: 1;
 }
 
 .typo-interlude-heading em {
   font-style: italic;
-  font-weight: 300;
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 400;
+  color: var(--color-deep-olive, #55563F);
   display: block;
 }
 
-/* Crimson Ruby accent dot with multi-layer radiance */
 .typo-accent-dot {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--ameza-ruby, #E11D48);
+  background: var(--color-primary-rose, #C9A0A0);
   flex-shrink: 0;
-  margin-top: 22px;
-  box-shadow:
-    0 0 0 2px rgba(225, 29, 72, 0.35),
-    0 0 25px rgba(225, 29, 72, 0.7),
-    0 0 60px rgba(225, 29, 72, 0.35);
+  margin-top: clamp(20px, 4vw, 48px);
 }
 
 @media (max-width: 600px) {
   .typo-interlude-heading {
-    font-size: clamp(56px, 18vw, 96px);
+    font-size: clamp(48px, 15vw, 84px);
   }
   .typo-interlude-inner {
     flex-direction: column;
-    gap: 20px;
-  }
-  .typo-interlude-section::before {
-    display: none;
+    gap: 16px;
   }
 }
+

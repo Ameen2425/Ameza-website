@@ -1,42 +1,29 @@
 /* =========================================================
-   AMEZA ABOUT FINAL CTA (OBSIDIAN VELVET + 24K IMPERIAL GOLD)
+   AMEZA ABOUT FINAL CTA (QUIET LUXURY EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .about-final-section {
   width: 100%;
   max-width: var(--container-max-width, 1440px);
-  margin: 0 auto var(--section-gap, 42px);
+  margin: 0 auto var(--section-gap, 64px);
   padding: 0 clamp(16px, 4vw, 40px);
   box-sizing: border-box;
 }
 
 .about-final {
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
-  padding: clamp(32px, 5vw, 60px);
+  background: var(--ameza-bg-secondary, #EEE7DD);
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  padding: clamp(36px, 5vw, 64px);
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(28px, 4vw, 52px);
   align-items: center;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 18px rgba(48, 46, 42, 0.04);
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-}
-
-/* Ambient gold glow */
-.about-final::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: -40px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(229, 184, 59, 0.07) 0%, transparent 70%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ── Left Content ─────────────────────────────────────── */
@@ -49,41 +36,73 @@
 }
 
 .about-final-label {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--ameza-olive, #8A8A68);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .about-final-content h2 {
-  font-family: var(--font-heading, var(--font-display));
-  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.1;
+  color: var(--ameza-charcoal, #302E2A);
+  line-height: 1.12;
   letter-spacing: -0.02em;
-  margin: 0 0 14px 0;
+  margin: 0 0 16px 0;
 }
 
 .about-final-content h2 span {
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 400;
+  color: var(--ameza-olive-deep, #55563F);
 }
 
 .about-final-content p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 15px;
   line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
-  margin: 0 0 28px 0;
-  max-width: 440px;
+  color: var(--ameza-text-secondary, #55563F);
+  margin: 0 0 32px 0;
+  max-width: 480px;
+}
+
+.about-final-content .btn-terracotta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ameza-olive, #8A8A68);
+  color: #F6F1EA !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--radius-btn, 2px);
+  border: 1px solid var(--ameza-olive, #8A8A68);
+  text-decoration: none;
+  transition: all var(--transition-fast, 0.2s ease);
+  box-shadow: 0 4px 14px rgba(138, 138, 104, 0.2);
+}
+
+.about-final-content .btn-terracotta:hover {
+  background: var(--ameza-olive-hover, #787859);
+  border-color: var(--ameza-olive-hover, #787859);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+.about-final-content .btn-terracotta span {
+  transition: transform var(--transition-fast, 0.2s);
+}
+
+.about-final-content .btn-terracotta:hover span {
+  transform: translateX(4px);
 }
 
 /* ── Right Visual ─────────────────────────────────────── */
@@ -96,20 +115,11 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3.4;
-  border-radius: var(--radius-xl, 20px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
-  border: 1px solid var(--ameza-border-card);
-  background: var(--ameza-card, #23121D);
-  box-shadow: var(--shadow-card);
-}
-
-.about-final-3d-glow {
-  position: absolute;
-  inset: -20px;
-  background: radial-gradient(circle, rgba(229, 184, 59, 0.18) 0%, transparent 70%);
-  filter: blur(24px);
-  z-index: 1;
-  pointer-events: none;
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(48, 46, 42, 0.06);
 }
 
 .about-final-3d-img {
@@ -119,23 +129,25 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s var(--ease-luxury);
+  transition: transform 0.7s ease;
 }
 
 .about-final-3d-wrap:hover .about-final-3d-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 @media (max-width: 960px) {
   .about-final {
     grid-template-columns: 1fr;
-    padding: 28px 20px;
-    gap: 24px;
+    padding: 36px 24px;
+    gap: 28px;
     text-align: center;
   }
+
   .about-final-content {
     align-items: center;
   }
+
   .about-final-content h2 {
     text-align: center;
   }

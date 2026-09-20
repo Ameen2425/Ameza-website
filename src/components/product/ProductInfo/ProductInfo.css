@@ -1,6 +1,6 @@
 /* =========================================================
-   AMEZA PRODUCT INFORMATION
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA PRODUCT INFORMATION (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Olive • Rose • Charcoal
    ========================================================= */
 
 .pine-info-container {
@@ -17,23 +17,23 @@
 }
 
 .pine-category-eyebrow span {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive, #8A8A68);
   display: inline-block;
 }
 
 /* ── 2. Product Title ─────────────────────────────────── */
 .pine-product-title {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(30px, 3.8vw, 52px);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0 0 16px 0;
   max-width: 720px;
 }
@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
 }
 
@@ -51,49 +51,48 @@
   display: inline-flex;
   align-items: center;
   gap: 2.5px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
 }
 
 .pine-stars .star-filled {
-  color: var(--ameza-ruby, #E11D48);
-  filter: drop-shadow(0 0 3px rgba(225, 29, 72, 0.45));
+  color: var(--color-olive, #8A8A68);
 }
 
 .pine-stars .star-empty {
-  color: rgba(218, 200, 195, 0.3);
+  color: var(--border-color, #D8D0C7);
 }
 
 .pine-rating-score {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-family: var(--font-mono, monospace);
   font-size: 13.5px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-rating-divider {
-  color: var(--ameza-border);
+  color: var(--border-color, #D8D0C7);
 }
 
 .pine-rating-label {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
 }
 
 .pine-rating-count {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 /* ── 4. Description ───────────────────────────────────── */
 .pine-description {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: clamp(14px, 1.05vw, 15.5px);
   font-weight: 400;
-  line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  line-height: 1.75;
+  color: var(--text-muted, #77746C);
   max-width: 650px;
   margin: 0 0 24px 0;
 }
@@ -115,18 +114,17 @@
 
 .pine-currency {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(20px, 2.2vw, 26px);
   font-weight: 400;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .pine-amount {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(32px, 3.8vw, 46px);
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  font-size: clamp(30px, 3.6vw, 42px);
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
   line-height: 1;
-  letter-spacing: -0.02em;
 }
 
 .pine-price-meta {
@@ -136,21 +134,20 @@
 }
 
 .pine-old-price {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 16px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   text-decoration: line-through;
 }
 
 .pine-savings-pill {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 11.5px;
-  font-weight: 700;
-  background: var(--ameza-copper-bg, rgba(230, 126, 100, 0.18));
-  color: var(--ameza-copper, #E67E64);
-  border: 1px solid var(--ameza-copper-border, rgba(230, 126, 100, 0.45));
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--color-rose, #C9A0A0);
+  color: #FFFFFF;
   padding: 4px 10px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-btn, 2px);
   letter-spacing: 0.04em;
 }
 
@@ -159,42 +156,37 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  border-radius: var(--radius-btn, 2px);
   margin-bottom: 24px;
-  font-family: var(--font-body);
-  font-size: 12.5px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12px;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
   box-sizing: border-box;
 }
 
 .pine-stock-pill.in-stock {
-  background: var(--ameza-emerald-bg, rgba(16, 185, 129, 0.16));
-  border: 1px solid var(--ameza-emerald-border, rgba(16, 185, 129, 0.45));
-  color: var(--ameza-emerald, #10B981);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-stock-pill.low-stock {
-  background: var(--ameza-copper-bg, rgba(230, 126, 100, 0.18));
-  border: 1px solid var(--ameza-copper-border, rgba(230, 126, 100, 0.45));
-  color: var(--ameza-copper, #E67E64);
+  color: var(--color-rose, #C9A0A0);
 }
 
 .pine-stock-pill.out-stock {
-  background: rgba(225, 29, 72, 0.14);
-  border: 1px solid rgba(225, 29, 72, 0.45);
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--text-muted, #77746C);
 }
 
 .pine-stock-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: currentColor;
-  box-shadow: 0 0 8px currentColor;
+  background: var(--color-olive, #8A8A68);
 }
 
 .pine-stock-title {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .pine-stock-sep {
@@ -202,7 +194,7 @@
 }
 
 .pine-stock-count {
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
 }
 
 /* ── 7. Product Specifications Panel ──────────────────── */
@@ -211,13 +203,12 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   width: 100%;
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.28));
-  border-radius: var(--radius-card, 16px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 16px 20px;
   margin-bottom: 28px;
   box-sizing: border-box;
-  box-shadow: var(--shadow-card);
 }
 
 .pine-spec-item {
@@ -227,35 +218,35 @@
 }
 
 .pine-spec-label {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--color-olive, #8A8A68);
 }
 
 .pine-spec-val {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
   text-transform: capitalize;
 }
 
 .pine-spec-val.text-verified {
-  color: var(--ameza-emerald, #10B981);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .pine-spec-val.text-out {
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--text-muted, #77746C);
 }
 
 /* ── 8. Quantity & CTA Action Buttons ─────────────────── */
 .pine-actions-wrap {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
   margin-bottom: 32px;
   flex-wrap: wrap;
@@ -266,35 +257,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-pill, 999px);
-  height: 52px;
-  width: 120px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  height: 48px;
+  width: 110px;
   padding: 4px;
   box-sizing: border-box;
   flex-shrink: 0;
 }
 
 .pine-qty-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-btn, 2px);
   background: transparent;
   border: none;
-  color: var(--ameza-text, #FAF7F2);
-  font-size: 18px;
+  color: var(--text-charcoal, #302E2A);
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .pine-qty-btn:hover:not(:disabled) {
-  background: var(--ameza-card-hover, #2E1826);
-  color: var(--ameza-ruby, #E11D48);
+  background: var(--bg-secondary, #EEE7DD);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .pine-qty-btn:disabled {
@@ -303,40 +294,37 @@
 }
 
 .pine-qty-num {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-mono, monospace);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
 }
 
 /* Primary CTA: ADD TO CART */
 .pine-btn-primary-sage {
   flex: 1;
-  min-width: 160px;
-  height: 58px;
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
+  min-width: 150px;
+  height: 48px;
+  background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
   border: none;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow-ruby, var(--shadow-gold));
-  transition: all var(--transition);
+  transition: background var(--transition-fast, 0.2s ease);
   box-sizing: border-box;
 }
 
 .pine-btn-primary-sage:hover:not(:disabled) {
-  background: var(--ameza-ruby-gradient-hover, var(--ameza-gold-gradient-hover));
-  box-shadow: var(--shadow-ruby-lg, var(--shadow-gold-lg));
-  transform: translateY(-2px);
+  background: var(--color-olive, #8A8A68);
 }
 
 .pine-btn-primary-sage:disabled {
@@ -347,31 +335,28 @@
 /* Secondary CTA: BUY NOW */
 .pine-btn-accent-apricot {
   flex: 1;
-  min-width: 140px;
-  height: 58px;
-  background: var(--ameza-copper-gradient, var(--ameza-copper));
+  min-width: 130px;
+  height: 48px;
+  background: var(--color-rose, #C9A0A0);
   color: #FFFFFF !important;
   border: none;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(230, 126, 100, 0.35);
-  transition: all var(--transition);
+  transition: opacity var(--transition-fast, 0.2s ease);
   box-sizing: border-box;
 }
 
 .pine-btn-accent-apricot:hover:not(:disabled) {
-  background: var(--ameza-copper-hover);
-  box-shadow: 0 14px 30px rgba(230, 126, 100, 0.5);
-  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .pine-btn-accent-apricot:disabled {
@@ -383,54 +368,55 @@
 .pine-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 12px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .pine-benefit-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.28));
-  border-radius: var(--radius-card, 14px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 14px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
   box-sizing: border-box;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast, 0.2s ease);
 }
 
 .pine-benefit-card:hover {
-  background: var(--ameza-card-hover, #2E1826);
-  border-color: var(--ameza-border-ruby, #E11D48);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card);
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .pine-benefit-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(225, 29, 72, 0.14);
-  border: 1px solid rgba(225, 29, 72, 0.35);
+  background: var(--bg-secondary, #EEE7DD);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: var(--color-olive, #8A8A68);
+}
+
+.pine-benefit-icon svg {
+  stroke: var(--color-olive, #8A8A68);
 }
 
 .pine-benefit-card h4 {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 2px 0;
 }
 
 .pine-benefit-card p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
   line-height: 1.35;
 }
@@ -444,19 +430,19 @@
 
   .pine-actions-wrap {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .pine-qty-box {
     width: 100%;
-    height: 52px;
+    height: 48px;
   }
 
   .pine-btn-primary-sage,
   .pine-btn-accent-apricot {
     width: 100%;
-    height: 56px;
-    font-size: 13.5px;
+    height: 48px;
+    font-size: 13px;
   }
 
   .pine-benefits-grid {

@@ -1,5 +1,5 @@
 /* =========================================================
-   AMEZA AUTH HERO PANEL — VIEWPORT FIT (OBSIDIAN + 24K GOLD)
+   AMEZA AUTH HERO PANEL (QUIET LUXURY EDITORIAL)
    ========================================================= */
 
 .auth-hero-panel {
@@ -15,15 +15,16 @@
   width: 100%;
   flex: 1;
   min-height: 0;
-  border-radius: var(--radius-xl, 24px);
+  border-radius: var(--radius-card, 4px);
   overflow: hidden;
-  border: 1px solid var(--ameza-border-card, rgba(229, 184, 59, 0.28));
-  box-shadow: var(--shadow-card, 0 10px 30px -5px rgba(0, 0, 0, 0.8));
+  border: 1px solid var(--color-hairline, #D8D0C7);
+  box-shadow: 0 8px 30px rgba(48, 46, 42, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: clamp(20px, 3.5vh, 40px) clamp(20px, 2.5vw, 36px);
+  padding: clamp(24px, 4vh, 44px) clamp(20px, 2.5vw, 36px);
   box-sizing: border-box;
+  background: var(--color-surface, #EEE7DD);
 }
 
 .auth-hero-img {
@@ -32,38 +33,28 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 25%;
   z-index: 1;
-  transition: transform 0.8s var(--ease-luxury, cubic-bezier(0.16, 1, 0.3, 1));
-  filter: brightness(0.9) saturate(1.05);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: brightness(0.85);
 }
 
 .auth-hero-card:hover .auth-hero-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-/* Multi-stop luxury dark gradient overlay */
+/* Editorial subtle dark scrim for typography legibility */
 .auth-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(13, 7, 11, 0.15) 0%,
-    rgba(13, 7, 11, 0.45) 40%,
-    rgba(13, 7, 11, 0.88) 72%,
-    rgba(13, 7, 11, 0.98) 100%
+    rgba(48, 46, 42, 0.2) 0%,
+    rgba(48, 46, 42, 0.45) 45%,
+    rgba(48, 46, 42, 0.82) 75%,
+    rgba(48, 46, 42, 0.94) 100%
   );
   z-index: 2;
-}
-
-/* Gold radial highlight at top edge */
-.auth-hero-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(229, 184, 59, 0.12) 0%, transparent 65%);
-  z-index: 2;
-  pointer-events: none;
 }
 
 .auth-hero-content {
@@ -75,13 +66,13 @@
 }
 
 .auth-editorial-label {
-  font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
-  margin-bottom: clamp(6px, 1vh, 10px);
+  color: var(--color-primary-rose, #C9A0A0);
+  margin-bottom: clamp(8px, 1.2vh, 12px);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -92,36 +83,33 @@
   display: inline-block;
   width: 20px;
   height: 1px;
-  background: var(--ameza-gold, #E5B83B);
+  background: var(--color-primary-rose, #C9A0A0);
   opacity: 0.8;
 }
 
 .auth-editorial-title {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(1.8rem, 3.2vh, 2.8rem);
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.08;
+  font-size: clamp(2rem, 3.4vh, 2.8rem);
+  font-weight: 400;
+  color: #F6F1EA;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  margin: 0 0 clamp(6px, 1vh, 12px) 0;
+  margin: 0 0 clamp(8px, 1.2vh, 14px) 0;
 }
 
 .auth-editorial-title span {
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-style: italic;
   font-weight: 400;
+  color: #EEE7DD;
 }
 
 .auth-editorial-desc {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: clamp(12.5px, 1.6vh, 14px);
-  line-height: 1.6;
-  color: var(--ameza-text-secondary, #DAC8C3);
-  margin: 0 0 clamp(10px, 1.5vh, 20px) 0;
-  max-width: 380px;
+  font-size: clamp(13px, 1.6vh, 14.5px);
+  line-height: 1.65;
+  color: rgba(246, 241, 234, 0.82);
+  margin: 0 0 clamp(14px, 2vh, 24px) 0;
+  max-width: 400px;
 }
 
 .auth-benefits-strip {
@@ -135,32 +123,30 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(26, 13, 21, 0.85);
-  border: 1px solid var(--ameza-border, rgba(229, 184, 59, 0.22));
-  padding: 5px 12px;
-  border-radius: var(--radius-pill, 999px);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(48, 46, 42, 0.65);
+  border: 1px solid rgba(216, 208, 199, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-btn, 2px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all var(--transition-fast, 0.2s);
 }
 
 .auth-benefit-pill:hover {
-  border-color: var(--ameza-gold, #E5B83B);
-  background: rgba(35, 18, 29, 0.95);
-  transform: translateY(-1px);
+  border-color: rgba(216, 208, 199, 0.6);
+  background: rgba(48, 46, 42, 0.85);
 }
 
 .auth-benefit-dot {
-  color: var(--ameza-gold, #E5B83B);
-  font-size: 10px;
-  filter: drop-shadow(0 0 4px rgba(229, 184, 59, 0.7));
+  color: var(--color-primary-rose, #C9A0A0);
+  font-size: 9px;
 }
 
 .auth-benefit-text {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #F6F1EA;
   letter-spacing: 0.02em;
 }
 
@@ -174,13 +160,13 @@
     min-height: 180px;
     height: clamp(160px, 22vh, 220px);
     flex: none;
-    padding: 20px 24px;
-    border-radius: var(--radius-lg, 16px);
+    padding: 24px;
+    border-radius: var(--radius-card, 4px);
   }
 
   .auth-editorial-title {
-    font-size: clamp(1.4rem, 4vw, 1.9rem);
-    margin-bottom: 4px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 6px;
   }
 
   .auth-editorial-desc {
@@ -188,11 +174,11 @@
   }
 
   .auth-benefits-strip {
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   .auth-benefit-pill {
-    padding: 3px 10px;
+    padding: 4px 10px;
   }
 }
 
@@ -202,12 +188,11 @@
     height: 140px;
     min-height: 140px;
     padding: 16px 18px;
-    border-radius: var(--radius-md, 12px);
   }
 
   .auth-editorial-label {
-    font-size: 9.5px;
-    margin-bottom: 3px;
+    font-size: 0.68rem;
+    margin-bottom: 4px;
   }
 
   .auth-editorial-title {
@@ -219,3 +204,4 @@
     display: none;
   }
 }
+

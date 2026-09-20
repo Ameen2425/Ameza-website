@@ -1,58 +1,57 @@
 /* =========================================================
-   AMEZA CART DISCOVER (OBSIDIAN VELVET & 24K IMPERIAL GOLD)
+   AMEZA CART DISCOVER (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .cart-discover {
   max-width: var(--container-max-width, 1440px);
   margin: 0 auto var(--section-gap, 42px);
-  padding: 0 clamp(16px, 4vw, 40px);
+  padding: 0 clamp(20px, 5vw, 64px);
   box-sizing: border-box;
 }
 
 .cart-discover > div {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(32px, 4.5vw, 56px);
   text-align: center;
-  box-shadow: var(--shadow-card);
-  max-width: 800px;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .cart-discover .cart-label {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 12px;
 }
 
 .cart-discover h2 {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(1.8rem, 3.4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin: 0 0 12px 0;
 }
 
 .cart-discover h2 span {
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-olive-dark, #55563F);
   font-style: italic;
   font-weight: 400;
 }
 
 .cart-discover p {
-  font-family: var(--font-body);
-  font-size: 14.5px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 14px;
   line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   max-width: 480px;
   margin: 0 auto 24px;
 }
@@ -61,22 +60,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
+  background: var(--color-olive-dark, #55563F);
+  color: #FFFFFF !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 13px 30px;
-  border-radius: var(--radius-pill);
+  padding: 12px 28px;
+  border-radius: var(--radius-btn, 2px);
   text-decoration: none;
-  box-shadow: var(--shadow-gold);
-  transition: all var(--transition);
+  transition: background var(--transition-fast, 0.2s ease);
 }
 
 .cart-discover-btn:hover {
-  background: var(--ameza-gold-gradient-hover);
-  box-shadow: var(--shadow-gold-lg);
-  transform: translateY(-2px);
+  background: var(--color-olive, #8A8A68);
 }

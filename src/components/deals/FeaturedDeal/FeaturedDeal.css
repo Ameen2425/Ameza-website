@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA FEATURED SPOTLIGHT DEAL (OBSIDIAN & 24K IMPERIAL GOLD)
+   AMEZA FEATURED SPOTLIGHT DEAL (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Rose • Charcoal
    ========================================================= */
 
 .featured-deal-section {
@@ -11,15 +12,15 @@
 }
 
 .featured-deal-card {
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(28px, 4.5vw, 56px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
   box-sizing: border-box;
 }
 
@@ -32,37 +33,35 @@
 .featured-deal-img-frame {
   width: 100%;
   aspect-ratio: 4 / 3.4;
-  border-radius: var(--radius-xl, 20px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--ameza-border);
-  background: var(--ameza-card, #23121D);
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-color, #D8D0C7);
+  background: #FFFFFF;
 }
 
 .featured-deal-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-luxury);
+  transition: transform 0.6s ease;
 }
 
 .featured-deal-card:hover .featured-deal-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .featured-badge-float {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: var(--ameza-copper, #E67E64);
+  background: var(--color-rose, #C9A0A0);
   color: #FFFFFF;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 800;
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 14px rgba(230, 126, 100, 0.5);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-btn, 2px);
   z-index: 5;
 }
 
@@ -74,43 +73,41 @@
 }
 
 .featured-deal-eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.76rem;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-copper, #E67E64);
-  background: var(--ameza-copper-bg);
-  border: 1px solid var(--ameza-copper-border);
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
+  color: var(--color-rose, #C9A0A0);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  padding: 4px 12px;
+  border-radius: var(--radius-btn, 2px);
   display: inline-block;
   margin-bottom: 14px;
 }
 
 .featured-deal-title {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0 0 12px 0;
 }
 
 .featured-deal-title span {
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-olive-dark, #55563F);
   font-style: italic;
   font-weight: 400;
 }
 
 .featured-deal-desc {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: clamp(14px, 1.05vw, 15.5px);
   line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0 0 22px 0;
 }
 
@@ -129,55 +126,51 @@
 }
 
 .featured-price-old {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 16px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
+  text-decoration: line-through;
 }
 
 .featured-price-new {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(1.8rem, 2.8vw, 2.2rem);
-  font-weight: 700;
-  color: var(--ameza-gold-bright, #FFF5D0);
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
   line-height: 1;
-  filter: drop-shadow(0 2px 8px rgba(229, 184, 59, 0.35));
 }
 
 .featured-savings-tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--ameza-emerald, #10B981);
-  background: var(--ameza-emerald-bg);
-  border: 1px solid var(--ameza-emerald-border);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: var(--color-rose, #C9A0A0);
+  padding: 4px 10px;
+  border-radius: var(--radius-btn, 2px);
 }
 
 .btn-featured-shop {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 700;
+  background: var(--color-olive-dark, #55563F);
+  color: #FFFFFF !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.86rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 14px 32px;
-  border-radius: var(--radius-pill);
+  padding: 13px 28px;
+  border-radius: var(--radius-btn, 2px);
   border: none;
   cursor: pointer;
-  box-shadow: var(--shadow-gold);
-  transition: all var(--transition);
+  transition: background var(--transition-fast, 0.2s ease);
 }
 
 .btn-featured-shop:hover {
-  background: var(--ameza-gold-gradient-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold-lg);
+  background: var(--color-olive, #8A8A68);
 }
 
 @media (max-width: 960px) {

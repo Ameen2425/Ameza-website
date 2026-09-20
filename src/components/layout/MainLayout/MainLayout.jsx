@@ -6,6 +6,8 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import ScrollProgress from "../../common/ScrollProgress/ScrollProgress";
 import BackToTop from "../../common/BackToTop/BackToTop";
+import CartDrawer from "../../cart/CartDrawer/CartDrawer";
+import ToastContainer from "../../common/ToastContainer/ToastContainer";
 
 const MainLayout = () => {
   const location = useLocation();
@@ -51,6 +53,12 @@ const MainLayout = () => {
       <main className="main-content">
         <AppRouter />
       </main>
+
+      {/* Slide-out Mini-Cart Drawer */}
+      <CartDrawer />
+
+      {/* Global Animated Toast System */}
+      <ToastContainer />
 
       {/* Floating Back to Top Button */}
       <BackToTop />

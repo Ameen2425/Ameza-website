@@ -1,16 +1,16 @@
 /* =========================================================
-   AMEZA MASTER TYPOGRAPHY MATRIX
-   Editorial Serif (Playfair Display / Cormorant Garamond)
-   Sans-Serif (Manrope / Outfit) + Monospace (JetBrains Mono)
-   Crimson Ruby Red Luxury Highlights
+   AMEZA MASTER EDITORIAL TYPOGRAPHY MATRIX
+   Editorial Serif (Playfair Display)
+   Sans-Serif (Manrope) + Monospace (JetBrains Mono)
+   Quiet Luxury / Modern Editorial E-Commerce
    ========================================================= */
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 15px;
   line-height: 1.65;
-  color: var(--ameza-text, #FAF7F2);
-  background-color: var(--ameza-bg, #0D070B);
+  color: var(--ameza-text, #302E2A);
+  background-color: var(--ameza-bg, #F6F1EA);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,8 +18,8 @@ body {
 h1, h2, h3, h4, h5, h6,
 .font-display,
 .font-heading {
-  font-family: var(--font-heading, var(--font-display));
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  color: var(--ameza-text-headings, #302E2A);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .font-editorial {
-  font-family: var(--font-editorial, "Cormorant Garamond", serif);
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
 }
 
 h1 { font-size: clamp(2.2rem, 4.5vw, 4.2rem); }
@@ -38,58 +38,67 @@ h5 { font-size: 1.1rem; }
 h6 { font-size: 0.95rem; }
 
 p {
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--ameza-text-secondary, #55563F);
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* ── Crimson Ruby & Jewel Gradient Highlights ─────────── */
+/* ── Editorial Accents (Rose & Olive) ─────────────────── */
+.text-olive {
+  color: var(--ameza-olive, #8A8A68) !important;
+}
+
+.text-rose {
+  color: var(--ameza-rose, #C9A0A0) !important;
+}
+
+.text-charcoal {
+  color: var(--ameza-charcoal, #302E2A) !important;
+}
+
 .text-ruby-gradient,
 .text-gold-gradient,
 .editorial-ruby,
 .editorial-gold {
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--ameza-olive-deep, #55563F);
   display: inline-block;
 }
 
 .text-ruby,
 .text-gold {
-  color: var(--ameza-ruby, #E11D48) !important;
+  color: var(--ameza-olive, #8A8A68) !important;
 }
 
 .text-ruby-bright,
 .text-gold-bright {
-  color: var(--ameza-ruby-bright, #FFE4E6) !important;
+  color: var(--ameza-rose, #C9A0A0) !important;
 }
 
 .text-ruby-glow {
-  color: var(--ameza-ruby-bright, #FFE4E6) !important;
-  text-shadow: 0 0 16px rgba(225, 29, 72, 0.6);
+  color: var(--ameza-olive, #8A8A68) !important;
 }
 
 .text-emerald {
-  color: var(--ameza-emerald, #10B981) !important;
+  color: var(--ameza-olive-deep, #55563F) !important;
 }
 
 .text-sapphire {
-  color: var(--ameza-sapphire, #3B82F6) !important;
+  color: var(--ameza-olive, #8A8A68) !important;
 }
 
 .text-copper {
-  color: var(--ameza-copper, #E67E64) !important;
+  color: var(--ameza-rose, #C9A0A0) !important;
 }
 
 /* ── Section Eyebrow Labels ───────────────────────────── */
 .ameza-eyebrow,
 .section-eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.76rem;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--ameza-olive, #8A8A68);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -99,103 +108,117 @@ p {
 /* ── Technical Monospace Badges ───────────────────────── */
 .ameza-mono,
 .tech-tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.08em;
 }
 
-/* ── Luxury Button Architecture ───────────────────────── */
+/* ── Quiet Luxury Button Architecture ─────────────────── */
+/* Buttons: rectangular or very lightly rounded (2px) */
+.btn-primary,
 .btn-ruby,
 .btn-gold,
 .btn-primary-ruby,
-.btn-primary-gold {
+.btn-primary-gold,
+.btn-olive {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  color: #FFFFFF !important;
-  font-family: var(--font-body);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  background: var(--ameza-olive, #8A8A68);
+  color: #F6F1EA !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 13px 28px;
-  border-radius: var(--radius-pill);
-  border: none;
+  border-radius: var(--radius-btn, 2px);
+  border: 1px solid var(--ameza-olive, #8A8A68);
   cursor: pointer;
-  box-shadow: var(--shadow-ruby, var(--shadow-gold));
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(48, 46, 42, 0.06));
+  transition: all var(--transition, 0.3s ease);
   text-decoration: none;
   box-sizing: border-box;
 }
 
+.btn-primary:hover,
 .btn-ruby:hover,
 .btn-gold:hover,
 .btn-primary-ruby:hover,
-.btn-primary-gold:hover {
-  background: var(--ameza-ruby-gradient-hover, var(--ameza-gold-gradient-hover));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-ruby-lg, var(--shadow-gold-lg));
+.btn-primary-gold:hover,
+.btn-olive:hover {
+  background: var(--ameza-olive-hover, #787859);
+  border-color: var(--ameza-olive-hover, #787859);
   color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card, 0 4px 18px rgba(48, 46, 42, 0.05));
 }
 
-.btn-outline-ruby,
-.btn-outline-gold {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--ameza-text, #FAF7F2) !important;
-  font-family: var(--font-body);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 12px 26px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--ameza-border-ruby, var(--ameza-border-gold));
-  cursor: pointer;
-  transition: all var(--transition);
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-.btn-outline-ruby:hover,
-.btn-outline-gold:hover {
-  border-color: var(--ameza-ruby, #E11D48);
-  background: rgba(225, 29, 72, 0.16);
-  color: var(--ameza-ruby-bright, #FFE4E6) !important;
-  box-shadow: 0 0 16px rgba(225, 29, 72, 0.25);
-  transform: translateY(-2px);
-}
-
+.btn-secondary,
+.btn-rose,
 .btn-copper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--ameza-copper);
-  color: #FFFFFF !important;
-  font-family: var(--font-body);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  background: var(--ameza-rose, #C9A0A0);
+  color: #302E2A !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 13px 28px;
-  border-radius: var(--radius-pill);
-  border: none;
+  border-radius: var(--radius-btn, 2px);
+  border: 1px solid var(--ameza-rose, #C9A0A0);
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(230, 126, 100, 0.4);
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(48, 46, 42, 0.06));
+  transition: all var(--transition, 0.3s ease);
   text-decoration: none;
   box-sizing: border-box;
 }
 
+.btn-secondary:hover,
+.btn-rose:hover,
 .btn-copper:hover {
-  background: var(--ameza-copper-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(230, 126, 100, 0.55);
+  background: var(--ameza-rose-hover, #B88E8E);
+  border-color: var(--ameza-rose-hover, #B88E8E);
+  color: #1A1917 !important;
+  transform: translateY(-1px);
+}
+
+.btn-outline,
+.btn-outline-ruby,
+.btn-outline-gold,
+.btn-outline-olive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ameza-text, #302E2A) !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: var(--radius-btn, 2px);
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  cursor: pointer;
+  transition: all var(--transition, 0.3s ease);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.btn-outline:hover,
+.btn-outline-ruby:hover,
+.btn-outline-gold:hover,
+.btn-outline-olive:hover {
+  border-color: var(--ameza-olive, #8A8A68);
+  background: rgba(138, 138, 104, 0.08);
+  color: var(--ameza-olive-deep, #55563F) !important;
+  transform: translateY(-1px);
 }

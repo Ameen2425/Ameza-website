@@ -1,6 +1,6 @@
 /* =========================================================
-   AMEZA PRODUCT DETAILS & TABS
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA PRODUCT DETAILS & TABS (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .pine-details-section {
@@ -16,29 +16,29 @@
 }
 
 .pine-details-eyebrow {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive, #8A8A68);
   display: block;
   margin-bottom: 8px;
 }
 
 .pine-details-heading {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(26px, 3.2vw, 38px);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  letter-spacing: -0.02em;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
 /* ── Horizontal Tabs Navigation ───────────────────────── */
 .pine-tabs-nav-wrap {
   width: 100%;
-  border-bottom: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   margin-bottom: 32px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -56,24 +56,24 @@
   position: relative;
   background: transparent;
   border: none;
-  padding: 14px 4px 18px 4px;
-  font-family: var(--font-body);
+  padding: 14px 4px 16px 4px;
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   cursor: pointer;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast, 0.2s ease);
   white-space: nowrap;
 }
 
 .pine-tab-btn:hover {
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-tab-btn.active {
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-tab-active-indicator {
@@ -81,10 +81,8 @@
   bottom: -1px;
   left: 0;
   right: 0;
-  height: 2.5px;
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  border-radius: var(--radius-pill);
-  box-shadow: 0 0 12px rgba(225, 29, 72, 0.6);
+  height: 2px;
+  background: var(--color-olive-dark, #55563F);
 }
 
 /* ── 2-Column Content Grid ────────────────────────────── */
@@ -97,12 +95,12 @@
 
 /* ── Left Column: Tab Body ────────────────────────────── */
 .pine-tab-body {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.28));
-  border-radius: var(--radius-xl, 20px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(24px, 3.5vw, 40px);
   box-sizing: border-box;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
 }
 
 .pine-tab-pane {
@@ -112,18 +110,18 @@
 }
 
 .pine-pane-lead {
-  font-family: var(--font-body);
-  font-size: 15px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 14.5px;
   line-height: 1.75;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0;
 }
 
 .pine-checklist-title {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 18px;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 8px 0 4px 0;
 }
 
@@ -144,13 +142,12 @@
 }
 
 .pine-check-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: var(--ameza-emerald-bg, rgba(16, 185, 129, 0.16));
-  border: 1px solid var(--ameza-emerald-border, rgba(16, 185, 129, 0.45));
-  color: var(--ameza-emerald, #10B981);
-  font-size: 12px;
+  background: var(--bg-secondary, #EEE7DD);
+  color: var(--color-olive-dark, #55563F);
+  font-size: 11px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -161,18 +158,18 @@
 
 .pine-feature-list li strong {
   display: block;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
   margin-bottom: 2px;
 }
 
 .pine-feature-list li p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
   line-height: 1.55;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
 }
 
@@ -185,21 +182,21 @@
 }
 
 .pine-ingredient-tag {
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-xs, 8px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 10px 14px;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   text-align: center;
 }
 
 .pine-ingredients-note {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   font-style: italic;
   margin: 4px 0 0 0;
 }
@@ -208,44 +205,43 @@
 .pine-steps-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .pine-step-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-md, 12px);
+  gap: 14px;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 16px;
 }
 
 .pine-step-num {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FFE4E6);
-  background: rgba(225, 29, 72, 0.2);
-  border: 1px solid var(--ameza-ruby, #E11D48);
-  border-radius: var(--radius-xs, 8px);
-  padding: 6px 10px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: var(--color-olive-dark, #55563F);
+  border-radius: var(--radius-btn, 2px);
+  padding: 5px 8px;
   line-height: 1;
 }
 
 .pine-step-item strong {
   display: block;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
   margin-bottom: 3px;
 }
 
 .pine-step-item p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0;
   line-height: 1.5;
 }
@@ -254,10 +250,10 @@
 .pine-review-scorecard {
   display: flex;
   align-items: center;
-  gap: 32px;
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-card, 16px);
+  gap: 28px;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 20px 24px;
   margin-bottom: 20px;
   flex-wrap: wrap;
@@ -265,16 +261,17 @@
 
 .pine-scorecard-left h3 {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: 40px;
-  color: var(--ameza-text, #FAF7F2);
+  font-size: 38px;
+  color: var(--text-charcoal, #302E2A);
   margin: 0;
   line-height: 1;
+  font-weight: 500;
 }
 
 .pine-scorecard-left span {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .pine-scorecard-right {
@@ -289,29 +286,29 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-family: var(--font-mono, monospace);
   font-size: 11px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .pine-bar-track {
   flex: 1;
   height: 6px;
-  background: var(--ameza-section, #1A0D15);
-  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  border-radius: 3px;
   overflow: hidden;
 }
 
 .pine-bar-fill {
   height: 100%;
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  border-radius: var(--radius-pill);
+  background: var(--color-olive-dark, #55563F);
+  border-radius: 3px;
 }
 
 .pine-user-review {
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-md, 14px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 18px 20px;
 }
 
@@ -323,22 +320,22 @@
 }
 
 .pine-user-header strong {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-user-header span {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .pine-user-review p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13px;
   line-height: 1.6;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 8px 0 0 0;
   font-style: italic;
 }
@@ -347,41 +344,41 @@
 .pine-shipping-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 12px;
 }
 
 .pine-ship-card {
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-md, 12px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 16px;
 }
 
 .pine-ship-card h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 4px 0;
 }
 
 .pine-ship-card p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0;
   line-height: 1.5;
 }
 
 /* ── Right Column: Beauty Care Panel ──────────────────── */
 .pine-care-showcase-panel {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.28));
-  border-radius: var(--radius-xl, 20px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
 }
 
 .pine-care-img-wrap {
@@ -389,6 +386,7 @@
   width: 100%;
   height: 220px;
   overflow: hidden;
+  background: var(--bg-secondary, #EEE7DD);
 }
 
 .pine-care-img-wrap img {
@@ -399,13 +397,13 @@
 }
 
 .pine-care-showcase-panel:hover .pine-care-img-wrap img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .pine-care-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 30%, var(--ameza-card, #23121D) 100%);
+  background: linear-gradient(to bottom, transparent 40%, rgba(246, 241, 234, 0.8) 100%);
 }
 
 .pine-care-info-wrap {
@@ -416,28 +414,28 @@
 }
 
 .pine-care-eyebrow {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive, #8A8A68);
 }
 
 .pine-care-info-wrap h3 {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(20px, 2.2vw, 24px);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   line-height: 1.25;
   margin: 0;
 }
 
 .pine-care-info-wrap p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   line-height: 1.65;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0;
 }
 
@@ -453,21 +451,21 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-card-muted, #1B0E17);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
-  border-radius: var(--radius-xs, 8px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 8px 12px;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11.5px;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
 }
 
 .pine-badge-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--ameza-ruby, #E11D48);
+  background: var(--color-olive, #8A8A68);
   flex-shrink: 0;
 }
 

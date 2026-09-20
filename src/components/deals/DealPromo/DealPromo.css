@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA DEAL PROMO (OBSIDIAN & 24K IMPERIAL GOLD)
+   AMEZA DEAL PROMO (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .deal-promo-section {
@@ -11,15 +12,15 @@
 }
 
 .deal-promo-container {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(28px, 4.5vw, 56px);
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
   box-sizing: border-box;
 }
 
@@ -30,31 +31,31 @@
 }
 
 .deal-promo-eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.76rem;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 14px;
   display: block;
 }
 
 .deal-promo-heading {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.5vw, 3.2rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0 0 12px 0;
 }
 
 .deal-promo-sub {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: clamp(14px, 1.05vw, 15.5px);
   line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   margin: 0 0 24px 0;
 }
 
@@ -62,24 +63,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
-  font-family: var(--font-body);
+  background: var(--color-olive-dark, #55563F);
+  color: #FFFFFF !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 13px 28px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-btn, 2px);
   text-decoration: none;
-  box-shadow: var(--shadow-gold);
-  transition: all var(--transition);
+  transition: background var(--transition-fast, 0.2s ease);
 }
 
 .btn-promo-explore:hover {
-  background: var(--ameza-gold-gradient-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold-lg);
+  background: var(--color-olive, #8A8A68);
 }
 
 .deal-promo-visual {
@@ -90,22 +88,21 @@
 .deal-promo-img-wrap {
   width: 100%;
   aspect-ratio: 4 / 3.4;
-  border-radius: var(--radius-xl, 20px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
-  border: 1px solid var(--ameza-border);
-  background: var(--ameza-section, #1A0D15);
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-color, #D8D0C7);
+  background: #FFFFFF;
 }
 
 .deal-promo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-luxury);
+  transition: transform 0.6s ease;
 }
 
 .deal-promo-img-wrap:hover .deal-promo-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 @media (max-width: 960px) {

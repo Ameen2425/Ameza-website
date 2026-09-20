@@ -1,16 +1,16 @@
 /* =========================================================
-   AMEZA ORDERS (ORDER HISTORY) PAGE STYLES
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA ORDERS (ORDER HISTORY) (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal • Rose
    ========================================================= */
 
 .orders-page-root {
   min-height: 85vh;
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
-  padding-top: calc(var(--header-height-desktop, 76px) + 28px);
+  background-color: var(--bg-primary, #F6F1EA);
+  color: var(--text-charcoal, #302E2A);
+  padding-top: calc(var(--header-height-desktop, 76px) + 32px);
   padding-bottom: clamp(60px, 8vw, 100px);
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
   box-sizing: border-box;
 }
 
@@ -25,11 +25,11 @@
 
 .orders-eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--ameza-ruby, #E11D48);
+  letter-spacing: 0.16em;
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 8px;
   text-transform: uppercase;
 }
@@ -37,101 +37,98 @@
 .orders-title {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.6vw, 2.8rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 10px 0;
 }
 
 .orders-subtitle {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 14.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
   max-width: 600px;
 }
 
 /* ── Empty State ──────────────────────────────────────── */
 .orders-empty-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.25));
-  border-radius: var(--radius-xl, 24px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(40px, 6vw, 64px) 24px;
   text-align: center;
-  max-width: 600px;
+  max-width: 580px;
   margin: 40px auto;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
 }
 
 .orders-empty-icon {
   display: block;
   font-size: 2.2rem;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 16px;
 }
 
 .orders-empty-card h2 {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 12px 0;
 }
 
 .orders-empty-card p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 14px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0 0 28px 0;
   line-height: 1.6;
 }
 
 .btn-start-shopping {
   display: inline-block;
-  background: var(--ameza-ruby-gradient, linear-gradient(135deg, #FB7185 0%, #E11D48 50%, #9F1239 100%));
+  background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
-  padding: 14px 32px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
+  padding: 12px 28px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: var(--shadow-ruby);
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast, 0.2s ease);
 }
 
 .btn-start-shopping:hover {
-  background: var(--ameza-ruby-gradient-hover, linear-gradient(135deg, #FDA4AF 0%, #F43F5E 50%, #BE123C 100%));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-ruby-lg);
+  background: var(--color-olive, #8A8A68);
 }
 
 /* ── Orders List ──────────────────────────────────────── */
 .orders-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .order-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.25));
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(20px, 3vw, 28px);
-  box-shadow: var(--shadow-card);
-  transition: border-color var(--transition-fast);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  transition: border-color var(--transition-fast, 0.2s ease);
 }
 
 .order-card:hover {
-  border-color: var(--ameza-ruby, #E11D48);
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .order-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   padding-bottom: 16px;
   margin-bottom: 18px;
   flex-wrap: wrap;
@@ -147,45 +144,45 @@
 .order-id-tag {
   font-family: var(--font-mono, monospace);
   font-size: 14px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
 }
 
 .order-date {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .order-status-badge {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  border-radius: var(--radius-btn, 2px);
 }
 
 .order-status-badge.confirmed,
 .order-status-badge.delivered {
-  background: rgba(16, 185, 129, 0.16);
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  color: var(--ameza-emerald, #10B981);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .order-status-badge.preparing,
 .order-status-badge.dispatched {
-  background: rgba(225, 29, 72, 0.16);
-  border: 1px solid rgba(225, 29, 72, 0.45);
-  color: var(--ameza-ruby-bright, #FB7185);
+  background: rgba(201, 160, 160, 0.15);
+  border: 1px solid var(--color-rose, #C9A0A0);
+  color: var(--color-rose, #C9A0A0);
 }
 
 /* ── Items Preview ────────────────────────────────────── */
 .order-card-items {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -194,9 +191,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.15));
-  border-radius: var(--radius-sm, 10px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
 }
 
 .item-mini-left {
@@ -209,27 +206,30 @@
   width: 36px;
   height: 36px;
   object-fit: contain;
-  border-radius: 6px;
-  background: #180C14;
+  border-radius: var(--radius-btn, 2px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  padding: 2px;
 }
 
 .item-mini-title {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13px;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
+  font-weight: 500;
 }
 
 .item-mini-qty {
   font-family: var(--font-mono, monospace);
   font-size: 12px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .item-mini-price {
   font-family: var(--font-mono, monospace);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--color-olive-dark, #55563F);
 }
 
 /* ── Order Bottom ─────────────────────────────────────── */
@@ -237,7 +237,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(225, 29, 72, 0.2);
+  border-top: 1px solid var(--border-color, #D8D0C7);
   padding-top: 16px;
   flex-wrap: wrap;
   gap: 12px;
@@ -250,38 +250,38 @@
 }
 
 .order-total-label {
-  font-family: var(--font-body);
-  font-size: 12px;
-  color: var(--ameza-text-muted, #9E8B89);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11px;
+  color: var(--text-muted, #77746C);
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .order-total-val {
   font-family: var(--font-mono, monospace);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FB7185);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
 }
 
 .btn-order-details {
-  background: transparent;
-  border: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.35));
-  color: var(--ameza-text, #FAF7F2);
-  font-family: var(--font-body);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  border-radius: var(--radius-btn, 2px);
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-order-details:hover {
-  background: rgba(225, 29, 72, 0.16);
-  border-color: var(--ameza-ruby, #E11D48);
-  color: #FFFFFF;
+  background: var(--bg-secondary, #EEE7DD);
+  border-color: var(--color-olive-dark, #55563F);
 }
 
 /* ── Responsive ───────────────────────────────────────── */

@@ -1,55 +1,47 @@
 /* =========================================================
    FINAL BRAND CTA (SECTION 09) — ENTER AMEZA
-   VELVET OBSIDIAN & 24K GOLD LUXURY SYSTEM
+   QUIET LUXURY / MODERN EDITORIAL
    ========================================================= */
 
 .final-cta-section {
   position: relative;
-  min-height: 95vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--ameza-deep, #070306);
+  background: var(--color-surface, #EEE7DD);
+  border-top: 1px solid var(--color-hairline, #D8D0C7);
+  box-sizing: border-box;
+  padding: clamp(60px, 10vh, 100px) clamp(24px, 6vw, 80px) 32px;
 }
 
-/* ── Atmospheric background image ─────────────────────── */
+/* ── Absolute Backdrop Image ───────────────────────────── */
 .final-cta-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  opacity: 0.45;
-  filter: saturate(0.85) brightness(0.8);
+  object-position: center;
+  filter: brightness(0.92) contrast(1.02);
   z-index: 0;
-  transform: scale(1.05);
-  transition: transform 14s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
 }
 
-.final-cta-section:hover .final-cta-image {
-  transform: scale(1.0);
-}
-
-/* Multi-layer overlay for depth */
 .final-cta-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      ellipse 80% 70% at 50% 50%,
-      rgba(229, 184, 59, 0.1) 0%,
-      rgba(20, 10, 16, 0.5) 45%,
-      rgba(7, 3, 6, 0.94) 100%
-    ),
-    linear-gradient(to bottom, rgba(7, 3, 6, 0.7) 0%, transparent 30%, rgba(7, 3, 6, 0.85) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 241, 234, 0.6) 0%,
+    rgba(246, 241, 234, 0.9) 50%,
+    rgba(246, 241, 234, 0.98) 100%
+  );
   z-index: 1;
+  pointer-events: none;
 }
 
-/* ── Main content ──────────────────────────────────────── */
 .final-cta-inner {
   position: relative;
   z-index: 2;
@@ -57,18 +49,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(20px, 3.5vh, 36px);
-  padding: clamp(80px, 12vh, 120px) clamp(24px, 6vw, 80px);
-  max-width: 880px;
+  gap: clamp(20px, 3vh, 30px);
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 .final-cta-label {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-primary-olive, #8A8A68);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -77,40 +69,36 @@
 .final-cta-label::before,
 .final-cta-label::after {
   content: '';
-  width: 32px;
+  width: 28px;
   height: 1px;
-  background: var(--ameza-gold, #E5B83B);
+  background: var(--color-primary-olive, #8A8A68);
   opacity: 0.6;
 }
 
 .final-cta-heading {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(52px, 9vw, 130px);
-  font-weight: 700;
-  line-height: 0.88;
-  letter-spacing: -0.03em;
-  color: var(--ameza-text, #FAF7F2);
+  font-size: clamp(44px, 7vw, 92px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--color-charcoal, #302E2A);
   margin: 0;
-  text-shadow: 0 4px 50px rgba(0, 0, 0, 0.85);
 }
 
 .final-cta-heading em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   display: block;
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-deep-olive, #55563F);
 }
 
 .final-cta-sub {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: clamp(15px, 1.2vw, 17px);
   font-weight: 400;
-  line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
-  max-width: 440px;
+  line-height: 1.75;
+  color: var(--color-muted, #766E65);
+  max-width: 480px;
   margin: 0;
 }
 
@@ -120,97 +108,71 @@
   align-items: center;
   gap: 12px;
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #0D070B !important;
-  background: var(--ameza-gold-gradient);
+  color: #F6F1EA !important;
+  background: var(--color-deep-olive, #55563F);
   text-decoration: none;
-  padding: 18px 48px;
-  border-radius: var(--radius-pill);
+  padding: 16px 40px;
+  border-radius: var(--radius-btn, 2px);
   margin-top: 8px;
-  transition: all 0.4s var(--ease-luxury);
-  border: none;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-gold);
-}
-
-.final-cta-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--ameza-gold-gradient-hover);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s var(--ease-luxury);
-  z-index: 0;
-}
-
-.final-cta-btn > * {
-  position: relative;
-  z-index: 1;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  border: 1px solid var(--color-deep-olive, #55563F);
+  box-shadow: 0 4px 16px rgba(85, 86, 63, 0.2);
 }
 
 .final-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-gold-lg);
-}
-
-.final-cta-btn:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
+  background: #434431;
+  border-color: #434431;
+  box-shadow: 0 8px 24px rgba(85, 86, 63, 0.28);
 }
 
 .final-cta-btn svg {
-  transition: transform 0.4s var(--ease-luxury);
+  transition: transform var(--transition-fast);
 }
 
 .final-cta-btn:hover svg {
-  transform: translateX(6px);
+  transform: translateX(4px);
 }
 
 /* ── Bottom footer line ────────────────────────────────── */
 .final-cta-footer-line {
-  position: absolute;
-  bottom: clamp(24px, 4vh, 44px);
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(40px, 6vh, 60px);
   display: flex;
   align-items: center;
-  gap: 20px;
-  z-index: 2;
+  gap: 16px;
   white-space: nowrap;
 }
 
 .final-cta-footer-meta {
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
-  opacity: 0.8;
+  color: var(--color-muted, #766E65);
 }
 
 .final-cta-footer-dot {
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: var(--ameza-gold, #E5B83B);
-  flex-shrink: 0;
-  opacity: 0.7;
+  background: var(--color-primary-rose, #C9A0A0);
 }
 
 @media (max-width: 600px) {
   .final-cta-heading {
-    font-size: clamp(46px, 14vw, 76px);
+    font-size: clamp(36px, 11vw, 56px);
   }
   .final-cta-btn {
-    padding: 16px 36px;
-  }
-  .final-cta-footer-line {
-    flex-direction: column;
-    gap: 6px;
+    padding: 14px 28px;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
   }
 }
+

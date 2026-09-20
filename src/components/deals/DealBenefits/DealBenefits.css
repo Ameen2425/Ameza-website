@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA DEALS BENEFITS STRIP (OBSIDIAN VELVET & 24K GOLD)
+   AMEZA DEALS BENEFITS STRIP (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .deal-benefits-section {
@@ -11,14 +12,14 @@
 }
 
 .deal-benefits-container {
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 24px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(20px, 3vw, 28px) clamp(20px, 4vw, 36px);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: clamp(14px, 2vw, 24px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
   box-sizing: border-box;
 }
 
@@ -26,34 +27,32 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 12px;
-  border-radius: var(--radius-md, 12px);
-  transition: all var(--transition-fast);
+  padding: 8px 10px;
+  border-radius: var(--radius-btn, 2px);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .deal-benefit-card:hover {
-  background: rgba(250, 247, 242, 0.03);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .benefit-icon-wrap {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border);
-  color: var(--ameza-gold, #E5B83B);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--color-olive, #8A8A68);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast, 0.2s ease), border-color var(--transition-fast, 0.2s ease);
 }
 
 .deal-benefit-card:hover .benefit-icon-wrap {
-  transform: scale(1.1) rotate(4deg);
-  border-color: var(--ameza-gold, #E5B83B);
-  color: var(--ameza-gold-bright, #FFF5D0);
+  border-color: var(--color-olive-dark, #55563F);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .benefit-text-wrap {
@@ -63,19 +62,19 @@
 }
 
 .benefit-text-wrap strong {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 750;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11.5px;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
   line-height: 1.2;
 }
 
 .benefit-text-wrap span {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--text-muted, #77746C);
   line-height: 1.2;
 }
 

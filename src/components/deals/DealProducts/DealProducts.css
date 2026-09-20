@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA DEAL PRODUCTS (OBSIDIAN & 24K IMPERIAL GOLD)
+   AMEZA DEAL PRODUCTS (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Rose • Charcoal
    ========================================================= */
 
 .deal-products-section {
@@ -17,24 +18,22 @@
 }
 
 .deal-product-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 16px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  transition: border-color var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
   box-sizing: border-box;
   height: 100%;
   position: relative;
 }
 
 .deal-product-card:hover {
-  transform: translateY(-6px);
-  background: var(--ameza-card-hover, #2E1826);
-  border-color: var(--ameza-border-gold);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .deal-card-top {
@@ -47,37 +46,33 @@
 }
 
 .deal-card-discount-badge {
-  background: var(--ameza-copper, #E67E64);
+  background: var(--color-rose, #C9A0A0);
   color: #FFFFFF;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 700;
-  padding: 3px 9px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 12px rgba(230, 126, 100, 0.5);
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-btn, 2px);
 }
 
 .deal-card-wishlist-btn {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  color: var(--ameza-text-muted, #9E8B89);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .deal-card-wishlist-btn:hover,
 .deal-card-wishlist-btn.active {
-  border-color: var(--ameza-copper);
-  color: var(--ameza-copper);
-  transform: scale(1.08);
-  box-shadow: 0 4px 14px rgba(230, 126, 100, 0.5);
+  border-color: var(--color-rose, #C9A0A0);
+  color: var(--color-rose, #C9A0A0);
 }
 
 .deal-card-img-link {
@@ -88,11 +83,10 @@
 .deal-card-img-box {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: var(--radius-md, 12px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
-  background: var(--ameza-image-bg, #180C14);
-  border: 1px solid var(--ameza-border);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,11 +99,11 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.5s var(--ease-luxury);
+  transition: transform 0.4s ease;
 }
 
 .deal-product-card:hover .deal-card-img {
-  transform: scale(1.06);
+  transform: scale(1.03);
 }
 
 .deal-card-body {
@@ -124,10 +118,10 @@
 }
 
 .deal-card-title {
-  font-family: var(--font-heading, var(--font-display));
-  font-size: clamp(1.02rem, 1.1vw, 1.12rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 6px 0;
   line-height: 1.25;
   display: -webkit-box;
@@ -135,11 +129,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 2.5em;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast, 0.2s ease);
 }
 
 .deal-product-card:hover .deal-card-title {
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .deal-card-rating {
@@ -150,21 +144,20 @@
 }
 
 .star-icon {
-  color: var(--ameza-gold, #E5B83B);
-  font-size: 12px;
-  filter: drop-shadow(0 0 4px rgba(229, 184, 59, 0.4));
+  color: var(--color-olive, #8A8A68);
+  font-size: 11px;
 }
 
 .deal-card-rating strong {
-  font-family: var(--font-body);
+  font-family: var(--font-mono, monospace);
   font-size: 11.5px;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
 }
 
 .review-count {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .deal-card-price-row {
@@ -176,34 +169,33 @@
 }
 
 .deal-card-old-price {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
+  text-decoration: line-through;
 }
 
 .deal-card-new-price {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ameza-gold-bright, #FFF5D0);
-  filter: drop-shadow(0 2px 8px rgba(229, 184, 59, 0.35));
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
 }
 
 .deal-card-cart-btn {
   width: 100%;
-  height: 42px;
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
-  font-family: var(--font-body);
+  height: 40px;
+  background: var(--color-olive-dark, #55563F);
+  color: #FFFFFF !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-btn, 2px);
   border: none;
   cursor: pointer;
-  box-shadow: var(--shadow-gold);
-  transition: all var(--transition);
+  transition: background var(--transition-fast, 0.2s ease);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -211,9 +203,7 @@
 }
 
 .deal-card-cart-btn:hover {
-  background: var(--ameza-gold-gradient-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold-lg);
+  background: var(--color-olive, #8A8A68);
 }
 
 @media (max-width: 1100px) {

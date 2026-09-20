@@ -1,6 +1,6 @@
 /* =========================================================
-   AMEZA TRUST & CONCIERGE BAR
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA TRUST & CONCIERGE BAR (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .pine-trust-bar-section {
@@ -14,11 +14,11 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.28));
-  border-radius: var(--radius-lg, 18px);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 24px clamp(16px, 2.5vw, 32px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   gap: 14px;
   padding: 8px;
-  border-right: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.22));
+  border-right: 1px solid var(--border-color, #D8D0C7);
   box-sizing: border-box;
 }
 
@@ -36,25 +36,23 @@
 }
 
 .pine-trust-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(225, 29, 72, 0.14);
-  border: 1px solid rgba(225, 29, 72, 0.35);
-  color: var(--ameza-ruby, #E11D48);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--color-olive, #8A8A68);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .pine-trust-item:hover .pine-trust-icon-box {
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  border-color: transparent;
+  background: var(--color-olive-dark, #55563F);
+  border-color: var(--color-olive-dark, #55563F);
   color: #FFFFFF;
-  transform: scale(1.05);
-  box-shadow: var(--shadow-ruby);
 }
 
 .pine-trust-text {
@@ -64,18 +62,18 @@
 }
 
 .pine-trust-text h4 {
-  font-family: var(--font-body);
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-charcoal, #302E2A);
   margin: 0;
   letter-spacing: -0.01em;
 }
 
 .pine-trust-text p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
   line-height: 1.3;
 }
@@ -98,7 +96,7 @@
   }
   .pine-trust-item {
     border-right: none;
-    border-bottom: 1px solid var(--ameza-border, rgba(225, 29, 72, 0.18));
+    border-bottom: 1px solid var(--border-color, #D8D0C7);
     padding-bottom: 14px;
   }
   .pine-trust-item:last-child {

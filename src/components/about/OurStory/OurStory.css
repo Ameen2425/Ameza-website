@@ -1,21 +1,22 @@
 /* =========================================================
-   AMEZA OUR STORY (OBSIDIAN VELVET + 24K IMPERIAL GOLD)
+   AMEZA OUR STORY (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal
    ========================================================= */
 
 .about-story-section {
   width: 100%;
   max-width: var(--container-max-width, 1440px);
-  margin: 0 auto var(--section-gap, 42px);
+  margin: 0 auto var(--section-gap, 64px);
   padding: 0 clamp(16px, 4vw, 40px);
   box-sizing: border-box;
 }
 
 .about-story-container {
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
-  padding: clamp(28px, 4.5vw, 56px);
-  box-shadow: var(--shadow-card);
+  background: var(--ameza-bg-secondary, #EEE7DD);
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  padding: clamp(32px, 4.5vw, 60px);
+  box-shadow: 0 4px 18px rgba(48, 46, 42, 0.04);
   box-sizing: border-box;
 }
 
@@ -24,57 +25,55 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .about-section-num {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--ameza-gold, #E5B83B);
-  background: rgba(229, 184, 59, 0.12);
-  border: 1px solid rgba(229, 184, 59, 0.3);
+  color: var(--ameza-olive-deep, #55563F);
+  background: #FFFFFF;
+  border: 1px solid var(--ameza-border, #D8D0C7);
   padding: 3px 10px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-btn, 2px);
 }
 
 .about-section-label {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--ameza-olive, #8A8A68);
 }
 
 /* ── Story Grid ───────────────────────────────────────── */
 .about-story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 4vw, 52px);
+  gap: clamp(28px, 4vw, 56px);
   align-items: start;
 }
 
 .about-story-heading {
   position: sticky;
-  top: calc(var(--header-height-desktop, 76px) + 24px);
+  top: calc(var(--header-height-desktop, 76px) + 36px);
 }
 
 .about-story-heading h2 {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: var(--ameza-charcoal, #302E2A);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
 .about-story-heading h2 span {
-  background: var(--ameza-gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--ameza-olive-deep, #55563F);
   font-style: italic;
   font-weight: 400;
 }
@@ -83,30 +82,30 @@
 .about-story-content {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .about-lead {
-  font-family: var(--font-heading, var(--font-display));
-  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
   font-weight: 500;
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--ameza-olive-deep, #55563F);
   line-height: 1.5;
   margin: 0;
 }
 
 .about-story-content p {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 14.5px;
   line-height: 1.8;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--ameza-text-muted, #77746C);
   margin: 0;
 }
 
 @media (max-width: 900px) {
   .about-story-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
   .about-story-heading {
     position: static;

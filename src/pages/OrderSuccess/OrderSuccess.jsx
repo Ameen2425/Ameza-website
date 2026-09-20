@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./OrderSuccess.css";
+import OrderInvoiceModal from "../../components/orders/OrderInvoiceModal/OrderInvoiceModal";
 
 const OrderSuccess = () => {
   const location = useLocation();
   const [order, setOrder] = useState(null);
+  const [isInvoiceOpen, setIsInvoiceOpen] = useState(false);
 
   useEffect(() => {
     if (location.state?.order) {
@@ -109,6 +111,20 @@ const OrderSuccess = () => {
 
           {/* Action CTAs */}
           <div className="order-success-actions">
+            {order && (
+              <button
+                type="button"
+                className="btn-success-invoice"
+                onClick={() => setIsInvoiceOpen(true)}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="6 9 6 2 18 2 18 9"/>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                  <rect x="6" y="14" width="12" height="8"/>
+                </svg>
+                <span>Download / Print Invoice</span>
+              </button>
+            )}
             <Link to="/orders" className="btn-success-primary">
               View My Orders →
             </Link>
@@ -118,6 +134,15 @@ const OrderSuccess = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Official Atelier Invoice Modal */}
+      {order && (
+        <OrderInvoiceModal
+          isOpen={isInvoiceOpen}
+          onClose={() => setIsInvoiceOpen(false)}
+          order={order}
+        />
+      )}
     </div>
   );
 };

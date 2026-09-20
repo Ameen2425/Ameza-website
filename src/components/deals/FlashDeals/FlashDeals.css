@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA FLASH DEALS (OBSIDIAN VELVET & 24K IMPERIAL GOLD)
+   AMEZA FLASH DEALS (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Rose • Charcoal
    ========================================================= */
 
 .flash-deals-section {
@@ -18,7 +19,7 @@
 }
 
 .flash-icon {
-  color: var(--ameza-copper, #E67E64);
+  color: var(--color-olive, #8A8A68);
   margin-right: 4px;
 }
 
@@ -26,26 +27,26 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  padding: 4px 12px;
+  border-radius: var(--radius-btn, 2px);
 }
 
 .flash-ends-label {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-copper, #E67E64);
+  color: var(--color-olive, #8A8A68);
 }
 
 .flash-timer-mono {
   font-family: var(--font-mono, monospace);
   font-size: 12px;
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
   letter-spacing: 0.06em;
 }
 
@@ -56,35 +57,32 @@
 }
 
 .flash-deal-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 12px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  transition: border-color var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
   cursor: pointer;
   box-sizing: border-box;
   height: 100%;
 }
 
 .flash-deal-card:hover {
-  transform: translateY(-5px);
-  background: var(--ameza-card-hover, #2E1826);
-  border-color: var(--ameza-border-ruby);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .flash-deal-img-box {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: var(--radius-md, 12px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
   position: relative;
-  background: var(--ameza-image-bg, #180C14);
-  border: 1px solid var(--ameza-border);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -97,14 +95,13 @@
   position: absolute;
   top: 8px;
   left: 8px;
-  background: var(--ameza-copper, #E67E64);
+  background: var(--color-rose, #C9A0A0);
   color: #FFFFFF;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
   font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 12px rgba(230, 126, 100, 0.5);
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-btn, 2px);
   z-index: 3;
 }
 
@@ -112,11 +109,11 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.5s var(--ease-luxury);
+  transition: transform 0.4s ease;
 }
 
 .flash-deal-card:hover .flash-deal-img {
-  transform: scale(1.06);
+  transform: scale(1.03);
 }
 
 .flash-deal-details {
@@ -126,10 +123,10 @@
 }
 
 .flash-deal-name {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(0.95rem, 1.05vw, 1.05rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 6px 0;
   line-height: 1.25;
   display: -webkit-box;
@@ -137,11 +134,11 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 2.5em;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast, 0.2s ease);
 }
 
 .flash-deal-card:hover .flash-deal-name {
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  color: var(--color-olive-dark, #55563F);
 }
 
 .flash-deal-prices {
@@ -153,38 +150,39 @@
 }
 
 .flash-old-price {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
+  text-decoration: line-through;
 }
 
 .flash-new-price {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  font-weight: 600;
+  color: var(--color-olive-dark, #55563F);
 }
 
 .flash-quick-btn {
   width: 100%;
   height: 34px;
-  background: rgba(225, 29, 72, 0.12);
-  border: 1px solid var(--ameza-border);
-  color: var(--ameza-ruby-bright, #FFE4E6);
-  font-family: var(--font-body);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
-  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  border-radius: var(--radius-btn, 2px);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .flash-deal-card:hover .flash-quick-btn {
-  background: var(--ameza-ruby-gradient);
+  background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
-  border-color: transparent;
-  box-shadow: var(--shadow-ruby);
+  border-color: var(--color-olive-dark, #55563F);
 }
 
 /* Toast */
@@ -193,16 +191,15 @@
   top: 96px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(26, 13, 21, 0.95);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--ameza-border-ruby);
-  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 12px 28px;
-  color: var(--ameza-text, #FAF7F2);
-  font-family: var(--font-body);
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 24px rgba(225, 29, 72, 0.35);
+  box-shadow: var(--shadow-md, 0 4px 14px rgba(48, 46, 42, 0.08));
   z-index: 10000;
 }
 

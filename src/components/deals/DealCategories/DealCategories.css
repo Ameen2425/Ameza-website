@@ -1,5 +1,6 @@
 /* =========================================================
-   AMEZA DEAL CATEGORIES (OBSIDIAN VELVET & 24K IMPERIAL GOLD)
+   AMEZA DEAL CATEGORIES (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Rose • Charcoal
    ========================================================= */
 
 .deal-categories-section {
@@ -15,35 +16,35 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
-  border-bottom: 1px solid var(--ameza-border);
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   padding-bottom: 14px;
 }
 
 .deal-section-title {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(1.4rem, 2.4vw, 1.85rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0;
   letter-spacing: -0.01em;
 }
 
 .deal-section-link {
-  font-family: var(--font-body);
-  font-size: 12.5px;
-  font-weight: 700;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-olive-dark, #55563F);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .deal-section-link:hover {
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--color-olive, #8A8A68);
   transform: translateX(3px);
 }
 
@@ -54,34 +55,32 @@
 }
 
 .deal-category-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 12px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  transition: border-color var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
   text-decoration: none;
   height: 100%;
   box-sizing: border-box;
 }
 
 .deal-category-card:hover {
-  transform: translateY(-5px);
-  background: var(--ameza-card-hover, #2E1826);
-  border-color: var(--ameza-border-gold);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .deal-category-img-box {
   width: 100%;
   aspect-ratio: 4 / 3.4;
-  border-radius: var(--radius-md, 12px);
+  border-radius: var(--radius-btn, 2px);
   overflow: hidden;
   position: relative;
-  background: var(--ameza-image-bg, #180C14);
-  border: 1px solid var(--ameza-border);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
   margin-bottom: 10px;
 }
 
@@ -89,11 +88,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s var(--ease-luxury);
+  transition: transform 0.5s ease;
 }
 
 .deal-category-card:hover .deal-category-img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 .deal-category-info {
@@ -105,40 +104,40 @@
 }
 
 .deal-category-name {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 2px 0;
   line-height: 1.2;
 }
 
 .deal-category-discount {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
   font-size: 10px;
-  font-weight: 700;
-  color: var(--ameza-copper, #E67E64);
+  font-weight: 600;
+  color: var(--color-rose, #C9A0A0);
   display: block;
 }
 
 .deal-category-arrow {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background: rgba(229, 184, 59, 0.1);
-  border: 1px solid var(--ameza-border);
-  color: var(--ameza-gold, #E5B83B);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--color-olive-dark, #55563F);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
-  transition: all var(--transition-fast);
+  font-size: 12px;
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .deal-category-card:hover .deal-category-arrow {
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
-  border-color: transparent;
+  background: var(--color-olive-dark, #55563F);
+  color: #FFFFFF !important;
+  border-color: var(--color-olive-dark, #55563F);
   transform: translateX(3px);
 }
 

@@ -1,16 +1,16 @@
 /* =========================================================
-   AMEZA ACCOUNT PAGE STYLES
-   Velvet Obsidian Midnight + Crimson Ruby Red Theme
+   AMEZA ACCOUNT PAGE (QUIET LUXURY / MODERN EDITORIAL)
+   Warm Ivory • Soft Cream • Olive • Charcoal • Rose
    ========================================================= */
 
 .account-page-root {
   min-height: 85vh;
-  background-color: var(--ameza-bg, #0D070B);
-  color: var(--ameza-text, #FAF7F2);
-  padding-top: calc(var(--header-height-desktop, 76px) + 28px);
+  background-color: var(--bg-primary, #F6F1EA);
+  color: var(--text-charcoal, #302E2A);
+  padding-top: calc(var(--header-height-desktop, 76px) + 32px);
   padding-bottom: clamp(60px, 8vw, 100px);
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
   box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   padding-bottom: 24px;
   margin-bottom: 36px;
   flex-wrap: wrap;
@@ -33,11 +33,11 @@
 
 .account-eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--ameza-ruby, #E11D48);
+  letter-spacing: 0.16em;
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 6px;
   text-transform: uppercase;
 }
@@ -45,37 +45,36 @@
 .account-title {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.6vw, 2.8rem);
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 8px 0;
 }
 
 .account-subtitle {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 14.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   margin: 0;
   max-width: 600px;
 }
 
 .btn-logout-header {
-  background: rgba(225, 29, 72, 0.12);
-  border: 1px solid rgba(225, 29, 72, 0.35);
-  color: var(--ameza-ruby-bright, #FB7185);
-  padding: 10px 24px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 13px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
+  padding: 9px 22px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
   font-weight: 600;
+  letter-spacing: 0.04em;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-logout-header:hover {
-  background: var(--ameza-ruby, #E11D48);
-  color: #FFFFFF;
-  border-color: transparent;
-  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
+  background: var(--bg-secondary, #EEE7DD);
+  border-color: var(--color-olive-dark, #55563F);
 }
 
 /* ── Grid Layout ──────────────────────────────────────── */
@@ -88,11 +87,11 @@
 
 /* ── Profile Card ─────────────────────────────────────── */
 .account-profile-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.25));
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(24px, 4vw, 36px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
 }
 
 .profile-card-top {
@@ -100,46 +99,46 @@
   align-items: center;
   gap: 18px;
   margin-bottom: 28px;
-  border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   padding-bottom: 20px;
 }
 
 .profile-avatar {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: var(--ameza-ruby-gradient, linear-gradient(135deg, #FB7185 0%, #E11D48 50%, #9F1239 100%));
-  color: #FFFFFF;
-  font-size: 26px;
-  font-weight: 700;
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--color-olive-dark, #55563F);
+  font-size: 22px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(225, 29, 72, 0.45);
   flex-shrink: 0;
 }
 
 .profile-headings h3 {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0 0 4px 0;
 }
 
 .member-tier {
-  font-family: var(--font-body);
-  font-size: 11.5px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ameza-ruby-bright, #FB7185);
+  color: var(--color-olive, #8A8A68);
 }
 
 .profile-credentials-view {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .cred-row {
@@ -149,48 +148,45 @@
 }
 
 .cred-label {
-  font-family: var(--font-body);
-  font-size: 11px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .cred-val {
-  font-family: var(--font-body);
-  font-size: 15px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 14.5px;
   font-weight: 500;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--text-charcoal, #302E2A);
   margin: 0;
 }
 
 .profile-actions-strip {
   margin-top: 10px;
   padding-top: 20px;
-  border-top: 1px solid rgba(225, 29, 72, 0.2);
+  border-top: 1px solid var(--border-color, #D8D0C7);
 }
 
 .btn-edit-profile {
-  background: var(--ameza-ruby-gradient, linear-gradient(135deg, #FB7185 0%, #E11D48 50%, #9F1239 100%));
+  background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 13px 28px;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: var(--radius-btn, 2px);
+  padding: 12px 26px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--transition-fast);
-  box-shadow: var(--shadow-ruby);
+  transition: background var(--transition-fast, 0.2s ease);
 }
 
 .btn-edit-profile:hover {
-  background: var(--ameza-ruby-gradient-hover, linear-gradient(135deg, #FDA4AF 0%, #F43F5E 50%, #BE123C 100%));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-ruby-lg);
+  background: var(--color-olive, #8A8A68);
 }
 
 /* ── Edit Form ────────────────────────────────────────── */
@@ -207,29 +203,29 @@
 }
 
 .profile-edit-form label {
-  font-family: var(--font-body);
-  font-size: 11.5px;
-  font-weight: 600;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
 }
 
 .profile-edit-form input {
-  background: #150911;
-  border: 1px solid rgba(225, 29, 72, 0.3);
-  border-radius: var(--radius-sm, 10px);
-  padding: 12px 16px;
-  color: #FAF7F2;
-  font-family: var(--font-body);
-  font-size: 14.5px;
+  background: var(--bg-primary, #F6F1EA);
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  padding: 11px 14px;
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 14px;
   outline: none;
   box-sizing: border-box;
 }
 
 .profile-edit-form input:focus {
-  border-color: var(--ameza-ruby, #E11D48);
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
+  border-color: var(--color-olive-dark, #55563F);
+  background: #FFFFFF;
 }
 
 .edit-form-buttons {
@@ -240,45 +236,59 @@
 }
 
 .btn-save-cred {
-  background: var(--ameza-ruby-gradient, linear-gradient(135deg, #FB7185 0%, #E11D48 50%, #9F1239 100%));
+  background: var(--color-olive-dark, #55563F);
   color: #FFFFFF !important;
   border: none;
-  border-radius: var(--radius-pill);
-  padding: 12px 26px;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
+  border-radius: var(--radius-btn, 2px);
+  padding: 11px 24px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: var(--shadow-ruby);
+  transition: background var(--transition-fast, 0.2s ease);
+}
+
+.btn-save-cred:hover {
+  background: var(--color-olive, #8A8A68);
 }
 
 .btn-cancel-cred {
   background: transparent;
-  border: 1px solid rgba(225, 29, 72, 0.3);
-  color: var(--ameza-text-secondary, #DAC8C3);
-  border-radius: var(--radius-pill);
-  padding: 12px 24px;
-  font-family: var(--font-body);
-  font-size: 13px;
+  border: 1px solid var(--border-color, #D8D0C7);
+  color: var(--text-charcoal, #302E2A);
+  border-radius: var(--radius-btn, 2px);
+  padding: 11px 22px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.btn-cancel-cred:hover {
+  background: var(--bg-secondary, #EEE7DD);
 }
 
 /* ── Activity Hub Column ──────────────────────────────── */
 .account-hubs-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .account-hub-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(225, 29, 72, 0.25));
-  border-radius: var(--radius-card, 18px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: clamp(20px, 3vw, 28px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(48, 46, 42, 0.05));
+  transition: border-color var(--transition-fast, 0.2s ease);
+}
+
+.account-hub-card:hover {
+  border-color: var(--color-olive, #8A8A68);
 }
 
 .hub-header {
@@ -286,46 +296,46 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 12px;
-  border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+  border-bottom: 1px solid var(--border-color, #D8D0C7);
   padding-bottom: 12px;
 }
 
 .hub-tag {
   display: block;
-  font-family: var(--font-body);
-  font-size: 10.5px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ameza-ruby, #E11D48);
+  color: var(--color-olive, #8A8A68);
   margin-bottom: 4px;
 }
 
 .hub-header h4 {
   font-family: var(--font-heading, "Playfair Display", serif);
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  font-weight: 500;
+  color: var(--text-charcoal, #302E2A);
   margin: 0;
 }
 
 .hub-badge {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ameza-ruby-bright, #FB7185);
-  background: rgba(225, 29, 72, 0.16);
-  border: 1px solid rgba(225, 29, 72, 0.42);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  color: var(--color-olive-dark, #55563F);
+  background: var(--bg-secondary, #EEE7DD);
+  border: 1px solid var(--border-color, #D8D0C7);
+  padding: 4px 10px;
+  border-radius: var(--radius-btn, 2px);
 }
 
 .hub-desc {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--text-muted, #77746C);
   line-height: 1.6;
   margin: 0 0 16px 0;
 }
@@ -336,17 +346,17 @@
 }
 
 .btn-hub-link {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 700;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--ameza-ruby-bright, #FB7185);
+  color: var(--color-olive-dark, #55563F);
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.2s ease);
 }
 
 .btn-hub-link:hover {
-  color: #FFFFFF;
+  color: var(--color-olive, #8A8A68);
   transform: translateX(4px);
 }
 
@@ -356,18 +366,18 @@
   top: 96px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-ruby, #E11D48);
-  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  border: 1px solid var(--border-color, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 12px 24px;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--ameza-text, #FAF7F2);
-  font-family: var(--font-body);
+  color: var(--text-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(225, 29, 72, 0.35);
+  box-shadow: var(--shadow-md, 0 4px 14px rgba(48, 46, 42, 0.08));
   z-index: 99999;
   max-width: 90vw;
 }

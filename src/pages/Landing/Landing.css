@@ -1,12 +1,14 @@
 /* =========================================================
-   AMEZA LANDING PAGE — ROOT STYLES (VELVET OBSIDIAN THEME)
+   AMEZA LANDING PAGE — ROOT STYLES (QUIET LUXURY EDITORIAL)
    ========================================================= */
 
 .ameza-landing-page {
-  background-color: var(--ameza-bg);
-  color: var(--ameza-text);
-  font-family: var(--font-body);
+  background-color: var(--color-bg, #F6F1EA);
+  color: var(--color-charcoal, #302E2A);
+  font-family: var(--font-body, "Manrope", sans-serif);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,3 +19,4 @@
     scroll-behavior: smooth;
   }
 }
+

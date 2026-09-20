@@ -1,5 +1,5 @@
 /* =========================================================
-   AMEZA SIGNUP FORM — VIEWPORT FIT & RESPONSIVE (OBSIDIAN & 24K GOLD)
+   AMEZA SIGNUP FORM (QUIET LUXURY EDITORIAL)
    ========================================================= */
 
 .signup-form-wrapper {
@@ -15,30 +15,30 @@
   gap: 8px;
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-muted, #766E65);
   text-decoration: none;
-  margin-bottom: 12px;
-  transition: all var(--transition-fast, 0.2s);
+  margin-bottom: 14px;
+  transition: color var(--transition-fast, 0.2s), transform var(--transition-fast, 0.2s);
   flex-shrink: 0;
   width: fit-content;
 }
 
 .signup-back-link:hover {
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--color-charcoal, #302E2A);
   transform: translateX(-3px);
 }
 
 /* ── Form Card ────────────────────────────────────────── */
 .signup-form-card {
-  background: var(--ameza-card, #23121D);
-  border: 1px solid var(--ameza-border-card, rgba(229, 184, 59, 0.28));
-  border-radius: var(--radius-xl, 24px);
-  padding: clamp(20px, 3vh, 36px) clamp(20px, 3vw, 40px);
+  background: var(--color-card, #FFFFFF);
+  border: 1px solid var(--color-hairline, #D8D0C7);
+  border-radius: var(--radius-card, 4px);
+  padding: clamp(24px, 3.5vh, 40px) clamp(22px, 3vw, 42px);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card, 0 10px 30px -5px rgba(0, 0, 0, 0.8));
+  box-shadow: 0 8px 32px rgba(48, 46, 42, 0.04);
   box-sizing: border-box;
   flex: 1;
   min-height: 0;
@@ -46,41 +46,42 @@
 }
 
 .signup-header-block {
-  margin-bottom: clamp(10px, 1.8vh, 18px);
+  margin-bottom: clamp(14px, 2vh, 20px);
   flex-shrink: 0;
 }
 
 .signup-form-label {
   font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-primary-olive, #8A8A68);
   margin-bottom: 4px;
   display: block;
 }
 
 .signup-form-title {
   font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(1.5rem, 2.5vh, 2.2rem);
-  font-weight: 700;
-  color: var(--ameza-text, #FAF7F2);
-  margin: 0 0 3px 0;
+  font-size: clamp(1.7rem, 2.8vh, 2.3rem);
+  font-weight: 400;
+  color: var(--color-charcoal, #302E2A);
+  margin: 0 0 4px 0;
   line-height: 1.15;
+  letter-spacing: -0.015em;
 }
 
 .signup-subtitle {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: clamp(12px, 1.5vh, 13px);
-  color: var(--ameza-text-secondary, #DAC8C3);
+  font-size: 13px;
+  color: var(--color-muted, #766E65);
   margin: 0;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 /* ── Form Groups ──────────────────────────────────────── */
 .signup-form-group {
-  margin-bottom: clamp(9px, 1.4vh, 14px);
+  margin-bottom: clamp(10px, 1.6vh, 16px);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -88,11 +89,11 @@
 
 .signup-form-group label {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: var(--ameza-text-secondary, #DAC8C3);
-  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-charcoal, #302E2A);
+  margin-bottom: 5px;
 }
 
 .signup-form-group .input-wrap {
@@ -105,71 +106,69 @@
 .signup-form-group .input-field-icon {
   position: absolute;
   left: 16px;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--color-muted, #766E65);
   pointer-events: none;
   transition: color var(--transition-fast, 0.2s);
 }
 
 .signup-form-group input {
   width: 100%;
-  height: clamp(40px, 5vh, 46px);
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card, rgba(229, 184, 59, 0.28));
-  border-radius: var(--radius-pill, 999px);
+  height: clamp(42px, 5vh, 46px);
+  background: #FFFFFF;
+  border: 1px solid var(--color-hairline, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
   padding: 0 16px 0 44px;
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 13.5px;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--color-charcoal, #302E2A);
   outline: none;
   box-sizing: border-box;
-  transition: border-color var(--transition-fast, 0.2s), box-shadow var(--transition-fast, 0.2s), background var(--transition-fast, 0.2s);
+  transition: border-color var(--transition-fast, 0.2s), box-shadow var(--transition-fast, 0.2s);
 }
 
 .signup-form-group input:focus {
-  border-color: var(--ameza-gold, #E5B83B);
-  background: rgba(35, 18, 29, 0.95);
-  box-shadow: 0 0 0 3px rgba(229, 184, 59, 0.18), 0 0 16px rgba(229, 184, 59, 0.15);
+  border-color: var(--color-primary-olive, #8A8A68);
+  box-shadow: 0 0 0 1px var(--color-primary-olive, #8A8A68);
 }
 
 .signup-form-group input:focus + .input-field-icon,
 .signup-form-group .input-wrap:focus-within .input-field-icon {
-  color: var(--ameza-gold, #E5B83B);
+  color: var(--color-primary-olive, #8A8A68);
 }
 
 .signup-form-group input::placeholder {
-  color: var(--ameza-text-muted, #9E8B89);
+  color: #B8B0A8;
   font-size: 13px;
 }
 
 .signup-form-group .password-wrap input {
-  padding-right: 48px;
+  padding-right: 46px;
 }
 
 .signup-form-group .pwd-toggle-btn {
   position: absolute;
-  right: 14px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: var(--ameza-text-muted, #9E8B89);
+  color: var(--color-muted, #766E65);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6px;
-  border-radius: 50%;
-  transition: color var(--transition-fast, 0.2s), background var(--transition-fast, 0.2s);
+  border-radius: 2px;
+  transition: color var(--transition-fast, 0.2s);
 }
 
 .signup-form-group .pwd-toggle-btn:hover {
-  color: var(--ameza-gold, #E5B83B);
-  background: rgba(229, 184, 59, 0.08);
+  color: var(--color-charcoal, #302E2A);
 }
 
 /* ── Terms ────────────────────────────────────────────── */
 .signup-terms {
-  margin: clamp(4px, 0.8vh, 8px) 0 clamp(10px, 1.4vh, 16px);
+  margin: clamp(6px, 1vh, 10px) 0 clamp(12px, 1.8vh, 18px);
   flex-shrink: 0;
 }
 
@@ -188,67 +187,69 @@
 .signup-terms .checkbox-custom {
   width: 16px;
   height: 16px;
-  border: 1px solid var(--ameza-border, rgba(229, 184, 59, 0.22));
-  border-radius: 4px;
-  background: var(--ameza-section, #1A0D15);
+  border: 1px solid var(--color-hairline, #D8D0C7);
+  border-radius: 2px;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast, 0.2s);
   flex-shrink: 0;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .signup-terms .checkbox-wrap input:checked + .checkbox-custom {
-  background: var(--ameza-gold, #E5B83B);
-  border-color: var(--ameza-gold, #E5B83B);
-  box-shadow: 0 0 8px rgba(229, 184, 59, 0.4);
+  background: var(--color-deep-olive, #55563F);
+  border-color: var(--color-deep-olive, #55563F);
 }
 
 .signup-terms .checkbox-wrap input:checked + .checkbox-custom::after {
   content: "✓";
-  color: #0D070B;
-  font-size: 10px;
-  font-weight: 900;
+  color: #F6F1EA;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .signup-terms .checkbox-label {
   font-family: var(--font-body, "Manrope", sans-serif);
-  font-size: 11.5px;
-  color: var(--ameza-text-secondary, #DAC8C3);
-  line-height: 1.4;
+  font-size: 12px;
+  color: var(--color-muted, #766E65);
+  line-height: 1.45;
 }
 
 /* ── Submit Button ────────────────────────────────────── */
 .signup-primary-btn {
   width: 100%;
-  height: clamp(42px, 5.2vh, 48px);
-  background: var(--ameza-gold-gradient);
-  color: #0D070B !important;
+  height: clamp(44px, 5.5vh, 48px);
+  background: var(--color-deep-olive, #55563F);
+  color: #F6F1EA !important;
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-radius: var(--radius-pill, 999px);
-  border: none;
+  border-radius: var(--radius-btn, 2px);
+  border: 1px solid var(--color-deep-olive, #55563F);
   cursor: pointer;
-  box-shadow: var(--shadow-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: clamp(10px, 1.5vh, 16px);
-  transition: all var(--transition, 0.35s);
+  margin-bottom: clamp(12px, 1.8vh, 18px);
+  transition: background var(--transition-fast, 0.2s), border-color var(--transition-fast, 0.2s), transform var(--transition-fast, 0.2s);
   flex-shrink: 0;
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(85, 86, 63, 0.2);
 }
 
 .signup-primary-btn:hover {
-  background: var(--ameza-gold-gradient-hover);
-  box-shadow: var(--shadow-gold-lg);
-  transform: translateY(-2px);
+  background: #434431;
+  border-color: #434431;
+  transform: translateY(-1px);
+}
+
+.btn-arrow {
+  transition: transform var(--transition-fast, 0.2s);
 }
 
 .signup-primary-btn:hover .btn-arrow {
@@ -260,38 +261,37 @@
   text-align: center;
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12.5px;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--color-muted, #766E65);
   margin: 0;
   flex-shrink: 0;
 }
 
 .signup-login-link {
-  color: var(--ameza-gold, #E5B83B);
-  font-weight: 700;
+  color: var(--color-deep-olive, #55563F);
+  font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
   transition: color var(--transition-fast, 0.2s);
 }
 
 .signup-login-link:hover {
-  color: var(--ameza-gold-bright, #FFF5D0);
+  color: var(--color-charcoal, #302E2A);
   text-decoration: underline;
 }
 
 /* ── Mobile Optimization (≤ 480px) ────────────────────── */
 @media (max-width: 480px) {
   .signup-form-card {
-    padding: 20px 16px;
-    border-radius: var(--radius-lg, 16px);
+    padding: 22px 18px;
   }
 
   .signup-form-title {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
   }
 
   .signup-form-group input {
     height: 46px;
-    font-size: 16px; /* Prevents auto-zoom in iOS Safari */
+    font-size: 16px;
     padding: 0 14px 0 40px;
   }
 
@@ -300,7 +300,8 @@
   }
 
   .signup-primary-btn {
-    height: 46px;
+    height: 48px;
     font-size: 12.5px;
   }
 }
+

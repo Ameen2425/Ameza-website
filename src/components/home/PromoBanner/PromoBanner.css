@@ -1,42 +1,29 @@
 /* =========================================================
-   AMEZA PROMO BANNER (OBSIDIAN VELVET + CRIMSON RUBY RED)
+   AMEZA PROMO BANNER — QUIET LUXURY
+   Soft Cream background, Charcoal typography, Olive & Rose accents
    ========================================================= */
 
 .home-offer-section {
   width: 100%;
   max-width: var(--container-max-width, 1440px);
-  margin: 0 auto var(--section-gap, 42px);
-  padding: 0 clamp(16px, 4vw, 40px);
+  margin: 0 auto var(--section-gap, 64px);
+  padding: 0 clamp(20px, 4vw, 56px);
   box-sizing: border-box;
 }
 
 .home-offer {
-  background: var(--ameza-section, #1A0D15);
-  border: 1px solid var(--ameza-border-card);
-  border-radius: var(--radius-xl, 28px);
-  padding: clamp(32px, 5vw, 56px);
+  background: var(--ameza-bg-secondary, #EEE7DD);
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  border-radius: var(--radius-btn, 2px);
+  padding: clamp(36px, 5vw, 64px);
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: clamp(24px, 4vw, 48px);
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: clamp(28px, 4vw, 56px);
   align-items: center;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 18px rgba(48, 46, 42, 0.04);
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-}
-
-/* Ambient ruby glow within the section */
-.home-offer::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  right: 60px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.16) 0%, transparent 70%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .home-offer-content {
@@ -48,43 +35,41 @@
 }
 
 .home-offer-badge {
-  font-family: var(--font-body);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ameza-copper, #E67E64);
-  background: var(--ameza-copper-bg);
-  border: 1px solid var(--ameza-copper-border);
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
+  color: var(--ameza-rose, #C9A0A0);
+  background: rgba(201, 160, 160, 0.15);
+  border: 1px solid rgba(201, 160, 160, 0.4);
+  padding: 4px 12px;
+  border-radius: var(--radius-btn, 2px);
   display: inline-block;
   margin-bottom: 14px;
 }
 
 .home-offer-content h2 {
-  font-family: var(--font-heading, var(--font-display));
+  font-family: var(--font-heading, "Playfair Display", serif);
   font-size: clamp(2rem, 3.4vw, 3.2rem);
   font-weight: 600;
-  color: var(--ameza-text, #FAF7F2);
+  color: var(--ameza-charcoal, #302E2A);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 14px 0;
 }
 
 .home-offer-content h2 span {
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 400;
+  color: var(--ameza-olive-deep, #55563F);
 }
 
 .home-offer-content p {
-  font-family: var(--font-body);
-  font-size: clamp(14px, 1.05vw, 15px);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: clamp(14px, 1.05vw, 15.5px);
   line-height: 1.7;
-  color: var(--ameza-text-secondary, #DAC8C3);
+  color: var(--ameza-text-secondary, #55563F);
   margin: 0 0 20px 0;
   max-width: 520px;
 }
@@ -98,124 +83,135 @@
 }
 
 .offer-perk-item {
-  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  padding: 6px 14px;
+  border-radius: var(--radius-btn, 2px);
+  font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 11.5px;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--ameza-charcoal, #302E2A);
   letter-spacing: 0.04em;
-  color: var(--ameza-text, #FAF7F2);
-  background: rgba(250, 247, 242, 0.05);
-  border: 1px solid var(--ameza-border);
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
 }
 
+/* Button */
 .home-shop-btn {
+  background: var(--ameza-olive, #8A8A68);
+  color: #F6F1EA !important;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--radius-btn, 2px);
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ameza-ruby-gradient, var(--ameza-gold-gradient));
-  color: #FFFFFF !important;
-  font-family: var(--font-body);
-  font-size: 0.84rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 13px 30px;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  box-shadow: var(--shadow-ruby, var(--shadow-gold));
-  transition: all var(--transition);
+  border: 1px solid var(--ameza-olive, #8A8A68);
+  box-shadow: 0 4px 14px rgba(138, 138, 104, 0.2);
+  transition: all var(--transition-fast, 0.2s);
 }
 
 .home-shop-btn:hover {
-  background: var(--ameza-ruby-gradient-hover, var(--ameza-gold-gradient-hover));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-ruby-lg, var(--shadow-gold-lg));
+  background: var(--ameza-olive-hover, #787859);
+  border-color: var(--ameza-olive-hover, #787859);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
 }
 
-/* ── 3D Badge Visual ──────────────────────────────────── */
+.home-shop-btn span {
+  transition: transform var(--transition-fast, 0.2s);
+}
+
+.home-shop-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ── Visual Wrap & Editorial Badge Card ─────────────────── */
 .home-offer-visual-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   z-index: 2;
 }
 
 .home-offer-badge-card {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: var(--ameza-card, #23121D);
-  border: 2px solid var(--ameza-border-ruby, #E11D48);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(225, 29, 72, 0.4);
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  background: #FFFFFF;
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  outline: 1px solid rgba(138, 138, 104, 0.3);
+  outline-offset: -10px;
+  border-radius: var(--radius-btn, 2px);
+  padding: 36px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  transition: transform 0.6s var(--ease-luxury);
-}
-
-.home-offer-badge-card:hover {
-  transform: scale(1.05) rotate(2deg);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(48, 46, 42, 0.08);
+  box-sizing: border-box;
 }
 
 .badge-card-sub {
-  font-family: var(--font-mono);
-  font-size: 10px;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--ameza-ruby, #E11D48);
-  margin-bottom: 2px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ameza-olive, #8A8A68);
+  margin-bottom: 8px;
 }
 
 .badge-card-pct {
-  font-family: var(--font-heading, var(--font-display));
-  font-size: 52px;
-  font-weight: 700;
-  color: var(--ameza-ruby-bright, #FFE4E6);
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: clamp(4rem, 6.5vw, 5.8rem);
+  font-weight: 600;
+  color: var(--ameza-olive-deep, #55563F);
   line-height: 1;
-  text-shadow: 0 2px 20px rgba(225, 29, 72, 0.6);
+  letter-spacing: -0.03em;
+  margin: 0;
 }
 
 .badge-card-tag {
-  font-family: var(--font-body);
-  font-size: 9.5px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: var(--ameza-copper, #E67E64);
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-top: 4px;
+  color: var(--ameza-charcoal, #302E2A);
+  margin-top: 10px;
+  border-top: 1px solid var(--ameza-border, #D8D0C7);
+  padding-top: 10px;
+  width: 80%;
 }
 
 .badge-card-glow {
   position: absolute;
-  inset: -15px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, transparent 70%);
+  inset: 0;
+  border-radius: var(--radius-btn, 2px);
+  background: radial-gradient(circle at center, rgba(138, 138, 104, 0.06) 0%, transparent 70%);
   pointer-events: none;
-  filter: blur(12px);
 }
 
-@media (max-width: 960px) {
+/* Responsive */
+@media (max-width: 860px) {
   .home-offer {
     grid-template-columns: 1fr;
-    padding: 28px 20px;
-    gap: 24px;
-    text-align: center;
+    padding: 36px 24px;
+    gap: 36px;
   }
-  .home-offer-content {
-    align-items: center;
-  }
-  .home-offer-perks {
-    justify-content: center;
-  }
+
   .home-offer-badge-card {
-    width: 170px;
-    height: 170px;
-  }
-  .badge-card-pct {
-    font-size: 42px;
+    max-width: 260px;
+    padding: 28px 20px;
   }
 }

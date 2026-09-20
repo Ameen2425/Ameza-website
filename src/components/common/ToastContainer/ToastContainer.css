@@ -1,0 +1,164 @@
+/* =========================================================
+   AMEZA FLOATING TOAST NOTIFICATIONS — QUIET LUXURY
+   Warm Ivory / White Card, Olive / Rose accents, Charcoal typography
+   ========================================================= */
+
+.ameza-toast-portal {
+  position: fixed;
+  top: 86px;
+  right: 28px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  max-width: 400px;
+  width: calc(100vw - 32px);
+}
+
+.ameza-toast-card {
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  box-shadow: 0 10px 30px rgba(48, 46, 42, 0.1);
+  border-radius: var(--radius-btn, 2px);
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--ameza-charcoal, #302E2A);
+  transition: transform var(--transition-fast, 0.2s);
+}
+
+.ameza-toast-card:hover {
+  transform: translateY(-1px);
+}
+
+/* Icon Frame */
+.toast-icon-frame {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-btn, 2px);
+  background: var(--ameza-olive-light, rgba(138, 138, 104, 0.12));
+  border: 1px solid var(--ameza-olive, #8A8A68);
+  color: var(--ameza-olive, #8A8A68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.toast-wishlist .toast-icon-frame {
+  background: var(--ameza-rose-light, rgba(201, 160, 160, 0.16));
+  border-color: var(--ameza-rose, #C9A0A0);
+  color: var(--ameza-rose, #C9A0A0);
+}
+
+/* Thumbnail Frame */
+.toast-thumbnail-frame {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-btn, 2px);
+  overflow: hidden;
+  background: var(--ameza-bg, #F6F1EA);
+  border: 1px solid var(--ameza-border, #D8D0C7);
+  padding: 2px;
+}
+
+.toast-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Content */
+.toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-title {
+  margin: 0;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ameza-charcoal, #302E2A);
+  line-height: 1.3;
+}
+
+.toast-message {
+  margin: 3px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--ameza-text-secondary, #55563F);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.toast-quick-action {
+  display: inline-block;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ameza-olive, #8A8A68);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.toast-quick-action:hover {
+  color: var(--ameza-olive-deep, #55563F);
+}
+
+/* Close Button */
+.toast-close-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--ameza-text-muted, #77746C);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color var(--transition-fast);
+}
+
+.toast-close-btn:hover {
+  color: var(--ameza-charcoal, #302E2A);
+}
+
+/* Countdown progress bar */
+.toast-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ameza-olive, #8A8A68);
+  transform-origin: left center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .ameza-toast-portal {
+    top: 64px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    max-width: none;
+  }
+}
