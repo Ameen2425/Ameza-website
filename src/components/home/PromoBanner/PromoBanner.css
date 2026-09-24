@@ -113,7 +113,7 @@
   align-items: center;
   gap: 8px;
   border: 1px solid var(--ameza-olive, #8A8A68);
-  box-shadow: 0 4px 14px rgba(138, 138, 104, 0.2);
+  box-shadow: 0 4px 14px rgba(138, 138, 104, 0.25), 0 0 20px rgba(138, 138, 104, 0.2);
   transition: all var(--transition-fast, 0.2s);
 }
 
@@ -121,7 +121,8 @@
   background: var(--ameza-olive-hover, #787859);
   border-color: var(--ameza-olive-hover, #787859);
   color: #FFFFFF !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(138, 138, 104, 0.55), 0 0 32px rgba(201, 160, 160, 0.35);
 }
 
 .home-shop-btn span {
@@ -148,7 +149,7 @@
   aspect-ratio: 1 / 1;
   background: #FFFFFF;
   border: 1px solid var(--ameza-border, #D8D0C7);
-  outline: 1px solid rgba(138, 138, 104, 0.3);
+  outline: 1px solid rgba(138, 138, 104, 0.4);
   outline-offset: -10px;
   border-radius: var(--radius-btn, 2px);
   padding: 36px 28px;
@@ -157,8 +158,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(48, 46, 42, 0.08);
+  box-shadow: 0 12px 36px rgba(48, 46, 42, 0.08), 0 0 30px rgba(138, 138, 104, 0.22);
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-offer-badge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(48, 46, 42, 0.12), 0 0 45px rgba(201, 160, 160, 0.35);
 }
 
 .badge-card-sub {
@@ -179,6 +186,7 @@
   line-height: 1;
   letter-spacing: -0.03em;
   margin: 0;
+  text-shadow: 0 0 20px rgba(138, 138, 104, 0.3);
 }
 
 .badge-card-tag {
@@ -198,7 +206,7 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-btn, 2px);
-  background: radial-gradient(circle at center, rgba(138, 138, 104, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(138, 138, 104, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 

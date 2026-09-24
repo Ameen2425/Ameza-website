@@ -103,22 +103,28 @@
   --ameza-error: #B05353;
   --ameza-warning: #8A8A68;
 
-  /* ── 8. SUBTLE AMBIENT SHADOWS (RESTRAINED) ────────────── */
+  /* ── 8. LUMINOUS GLOW & AMBIENT SHADOWS ────────────────── */
   --shadow-xs: 0 1px 3px rgba(48, 46, 42, 0.04);
   --shadow-sm: 0 2px 8px rgba(48, 46, 42, 0.06);
   --shadow-card: 0 4px 18px rgba(48, 46, 42, 0.05);
-  --shadow-card-hover: 0 8px 26px rgba(48, 46, 42, 0.09);
-  --shadow-ruby: 0 4px 14px rgba(138, 138, 104, 0.18);
-  --shadow-ruby-lg: 0 8px 24px rgba(138, 138, 104, 0.24);
-  --shadow-ruby-glow: none;
-  --shadow-copper: 0 4px 14px rgba(201, 160, 160, 0.22);
+  --shadow-card-hover: 0 12px 32px rgba(48, 46, 42, 0.08), 0 0 24px rgba(138, 138, 104, 0.16);
+  --shadow-ruby: 0 4px 16px rgba(138, 138, 104, 0.25), 0 0 20px rgba(138, 138, 104, 0.15);
+  --shadow-ruby-lg: 0 8px 28px rgba(138, 138, 104, 0.35), 0 0 35px rgba(138, 138, 104, 0.22);
+  --shadow-ruby-glow: 0 0 22px rgba(138, 138, 104, 0.45), 0 0 45px rgba(138, 138, 104, 0.25);
+  --shadow-copper: 0 4px 16px rgba(201, 160, 160, 0.3), 0 0 22px rgba(201, 160, 160, 0.2);
   --shadow-gold: var(--shadow-ruby);
   --shadow-gold-lg: var(--shadow-ruby-lg);
-  --shadow-gold-glow: none;
-  --shadow-glass: 0 8px 28px rgba(48, 46, 42, 0.07);
-  --shadow-dropdown: 0 14px 34px rgba(48, 46, 42, 0.12);
-  --shadow-modal: 0 24px 60px rgba(48, 46, 42, 0.18);
+  --shadow-gold-glow: 0 0 25px rgba(212, 175, 122, 0.45), 0 0 50px rgba(197, 160, 89, 0.22);
+  --shadow-glass: 0 8px 32px rgba(48, 46, 42, 0.08), 0 0 20px rgba(138, 138, 104, 0.12);
+  --shadow-dropdown: 0 16px 40px rgba(48, 46, 42, 0.14), 0 0 20px rgba(138, 138, 104, 0.1);
+  --shadow-modal: 0 24px 64px rgba(48, 46, 42, 0.2), 0 0 40px rgba(138, 138, 104, 0.15);
   --shadow-apricot: var(--shadow-copper);
+
+  /* Dedicated Luminous Glow Tokens */
+  --ameza-glow-olive: 0 0 20px rgba(138, 138, 104, 0.45), 0 0 45px rgba(138, 138, 104, 0.2);
+  --ameza-glow-rose: 0 0 22px rgba(201, 160, 160, 0.5), 0 0 45px rgba(201, 160, 160, 0.22);
+  --ameza-glow-subtle: 0 0 16px rgba(138, 138, 104, 0.25);
+  --ameza-glow-border: 0 0 14px rgba(138, 138, 104, 0.35);
 
   /* ── 9. GEOMETRY (RECTANGULAR OR LIGHTLY ROUNDED) ──────── */
   --radius-xs: 2px;
@@ -146,8 +152,8 @@
 
   /* ── 12. CONTAINER & SPACING SYSTEM ────────────────────── */
   --container-max-width: 1440px;
-  --header-height-desktop: 88px;
-  --header-height-mobile: 72px;
+  --header-height-desktop: 72px;
+  --header-height-mobile: 56px;
   --bottom-nav-height: 64px;
   --page-padding-bottom-mobile: 96px;
   --section-gap: clamp(48px, 6vw, 100px);

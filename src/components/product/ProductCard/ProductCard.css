@@ -25,9 +25,9 @@
 }
 
 .editorial-product-card:hover {
-  transform: scale(1.02);
-  border-color: var(--ameza-olive, #8A8A68);
-  box-shadow: 0 8px 24px rgba(48, 46, 42, 0.07);
+  transform: translateY(-4px);
+  border-color: rgba(138, 138, 104, 0.7);
+  box-shadow: 0 12px 32px rgba(48, 46, 42, 0.08), 0 0 22px rgba(138, 138, 104, 0.22);
 }
 
 /* ── 1. Image Well ────────────────────────────────────── */
@@ -56,10 +56,10 @@
 }
 
 .editorial-product-card:hover .product-image {
-  transform: scale(1.06);
+  transform: scale(1.07);
 }
 
-/* Wishlist Button */
+/* Wishlist Button with Glow */
 .product-wishlist-btn {
   position: absolute;
   top: 12px;
@@ -81,11 +81,15 @@
 .product-wishlist-btn:hover {
   border-color: var(--ameza-olive, #8A8A68);
   background: #FFFFFF;
+  box-shadow: 0 0 12px rgba(138, 138, 104, 0.35);
+  transform: scale(1.06);
 }
 
 .product-wishlist-btn.active {
   color: var(--ameza-rose, #C9A0A0) !important;
   border-color: var(--ameza-rose, #C9A0A0);
+  background: #FFFFFF;
+  box-shadow: 0 0 14px rgba(201, 160, 160, 0.6);
 }
 
 /* ── 2. Card Body ─────────────────────────────────────── */
@@ -174,4 +178,12 @@
   background: var(--ameza-olive, #8A8A68);
   border-color: var(--ameza-olive, #8A8A68);
   color: #F6F1EA;
+  box-shadow: 0 4px 14px rgba(138, 138, 104, 0.35), 0 0 16px rgba(138, 138, 104, 0.2);
+}
+
+.product-add-btn:hover {
+  background: var(--ameza-olive-hover, #787859) !important;
+  border-color: var(--ameza-olive-hover, #787859) !important;
+  box-shadow: 0 6px 20px rgba(138, 138, 104, 0.5), 0 0 22px rgba(201, 160, 160, 0.3) !important;
+  transform: translateY(-1px);
 }

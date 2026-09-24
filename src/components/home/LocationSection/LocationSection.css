@@ -226,6 +226,17 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .location-container {
+    padding: 36px 28px;
+    gap: 32px;
+  }
+  .loc-item {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+}
+
 @media (max-width: 960px) {
   .location-container {
     grid-template-columns: 1fr;

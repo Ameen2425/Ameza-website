@@ -446,13 +446,14 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background var(--transition-fast, 0.2s), transform var(--transition-fast, 0.2s);
-  box-shadow: 0 4px 14px rgba(85, 86, 63, 0.2);
+  transition: all var(--transition-fast, 0.2s);
+  box-shadow: 0 4px 16px rgba(85, 86, 63, 0.3), 0 0 20px rgba(138, 138, 104, 0.2);
 }
 
 .drawer-btn-checkout:hover {
   background: #444532;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(85, 86, 63, 0.5), 0 0 30px rgba(138, 138, 104, 0.35);
 }
 
 .btn-arrow {

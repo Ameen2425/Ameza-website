@@ -219,7 +219,24 @@
 /* ── Responsive Adaptations ───────────────────────────── */
 @media (max-width: 1024px) {
   .footer-content {
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 36px 24px;
+  }
+
+  .footer-newsletter {
+    grid-column: span 4;
+    border-top: 1px solid var(--ameza-border, #D8D0C7);
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .footer-newsletter p {
+    margin-bottom: 0;
+    max-width: 400px;
   }
 }
 

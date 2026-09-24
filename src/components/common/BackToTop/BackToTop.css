@@ -26,7 +26,8 @@
   background: var(--ameza-olive, #8A8A68);
   color: #F6F1EA !important;
   border-color: var(--ameza-olive, #8A8A68);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(138, 138, 104, 0.45), 0 0 20px rgba(138, 138, 104, 0.3);
 }
 
 /* ── Mobile View: Position Above Floating Bottom Navbar ── */

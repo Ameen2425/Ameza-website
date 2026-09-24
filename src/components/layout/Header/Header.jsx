@@ -144,7 +144,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* DESKTOP & TABLET QUIET LUXURY FLOATING HEADER */}
+      {/* DESKTOP & TABLET QUIET LUXURY FULL-WIDTH HEADER */}
       <motion.header
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -156,7 +156,7 @@ const Header = () => {
             <BrandLogo variant="full" />
           </NavLink>
 
-          <nav className="navbar" aria-label="Primary navigation">
+          <nav className="navbar header-navbar" aria-label="Primary navigation">
             {navLinks.map((item) => {
               const isActive = location.pathname.startsWith(item.path);
 
@@ -164,7 +164,7 @@ const Header = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className={`nav-link ${isActive ? "active" : ""}`}
+                  className={`nav-link header-nav-link ${isActive ? "active" : ""}`}
                 >
                   <span className="nav-link-text">{item.name}</span>
                   {isActive && (

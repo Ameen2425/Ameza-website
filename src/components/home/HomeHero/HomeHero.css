@@ -62,6 +62,23 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
+}
+
+/* Atmospheric Luminous Backdrop Glow */
+.home-hero-center-content::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(650px, 90vw);
+  height: 380px;
+  background: radial-gradient(ellipse at center, rgba(201, 160, 160, 0.28) 0%, rgba(138, 138, 104, 0.2) 40%, transparent 72%);
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(48px);
+  animation: luxuryAuraGlow 7s ease-in-out infinite alternate;
 }
 
 /* ── Editorial Headline ────────────────────────────────── */
@@ -71,6 +88,7 @@
   align-items: center;
   margin: 0 0 16px 0;
   line-height: 1.05;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero-title-main {
@@ -79,6 +97,7 @@
   font-weight: 500;
   color: #FFFFFF;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title-italic {
@@ -88,6 +107,7 @@
   font-weight: 400;
   color: #F6F1EA;
   letter-spacing: -0.02em;
+  text-shadow: 0 0 24px rgba(246, 241, 234, 0.4), 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero-flagship-line {
@@ -102,6 +122,7 @@
   width: 32px;
   height: 1px;
   background: rgba(246, 241, 234, 0.6);
+  box-shadow: 0 0 8px rgba(246, 241, 234, 0.6);
 }
 
 .flagship-text {
@@ -111,15 +132,17 @@
   letter-spacing: 0.22em;
   color: #F6F1EA;
   text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(246, 241, 234, 0.3);
 }
 
 .hero-editorial-desc {
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: clamp(15px, 1.2vw, 18px);
   line-height: 1.7;
-  color: rgba(246, 241, 234, 0.9);
+  color: rgba(246, 241, 234, 0.92);
   max-width: 580px;
   margin: 0 0 32px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 /* Actions */
@@ -147,20 +170,24 @@
   align-items: center;
   gap: 8px;
   border: 1px solid var(--ameza-olive, #8A8A68);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(138, 138, 104, 0.4), 0 0 24px rgba(138, 138, 104, 0.25);
   transition: all var(--transition-fast, 0.2s);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-hero-primary-gold:hover {
   background: var(--ameza-olive-hover, #787859);
   border-color: var(--ameza-olive-hover, #787859);
   color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(138, 138, 104, 0.6), 0 0 35px rgba(201, 160, 160, 0.35);
 }
 
 .btn-hero-glass-outline {
-  background: rgba(246, 241, 234, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(246, 241, 234, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #FFFFFF !important;
   font-family: var(--font-body, "Manrope", sans-serif);
   font-size: 12px;
@@ -173,28 +200,38 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), inset 0 0 14px rgba(255, 255, 255, 0.12);
   transition: all var(--transition-fast, 0.2s);
 }
 
 .btn-hero-glass-outline:hover {
-  background: rgba(246, 241, 234, 0.25);
+  background: rgba(246, 241, 234, 0.28);
   border-color: #FFFFFF;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25), 0 0 24px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
 }
 
-/* Benefits floating strip */
+/* Benefits floating strip with glowing borders */
 .hero-editorial-benefits {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  background: rgba(246, 241, 234, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(246, 241, 234, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 14px 28px;
   border-radius: var(--radius-btn, 2px);
-  border: 1px solid var(--ameza-border, #D8D0C7);
-  box-shadow: 0 8px 24px rgba(48, 46, 42, 0.08);
+  border: 1px solid rgba(138, 138, 104, 0.35);
+  box-shadow: 0 8px 30px rgba(48, 46, 42, 0.08), 0 0 25px rgba(138, 138, 104, 0.18);
+  transition: all 0.3s ease;
+}
+
+.hero-editorial-benefits:hover {
+  border-color: var(--ameza-olive, #8A8A68);
+  box-shadow: 0 12px 38px rgba(48, 46, 42, 0.12), 0 0 32px rgba(138, 138, 104, 0.28);
+  transform: translateY(-2px);
 }
 
 .hero-benefit-item {
@@ -207,6 +244,7 @@
 .benefit-icon {
   color: var(--ameza-olive, #8A8A68);
   font-size: 14px;
+  filter: drop-shadow(0 0 6px rgba(138, 138, 104, 0.4));
 }
 
 .benefit-text strong {

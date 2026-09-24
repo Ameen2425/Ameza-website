@@ -1,28 +1,46 @@
 /* =========================================================
-   AMEZA MASTER LUXURY MOTION & MICRO-INTERACTIONS
-   Obsidian Velvet & Crimson Ruby Red
+   AMEZA MASTER LUXURY MOTION & GLOWING EFFECTS
+   Warm Ivory, Soft Cream, Olive, Rose & Champagne
    ========================================================= */
 
-@keyframes rubyShimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+@keyframes luxuryAuraGlow {
+  0% {
+    transform: scale(0.96) translate(-50%, -50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.08) translate(-50%, -50%);
+    opacity: 0.85;
+  }
+}
+
+@keyframes oliveGlowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(138, 138, 104, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(138, 138, 104, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 138, 104, 0);
+  }
+}
+
+@keyframes roseGlowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 160, 160, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(201, 160, 160, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 160, 160, 0);
+  }
 }
 
 @keyframes goldShimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
-}
-
-@keyframes rubyPulse {
-  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.48); }
-  70% { box-shadow: 0 0 0 12px rgba(225, 29, 72, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
-}
-
-@keyframes goldPulse {
-  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.48); }
-  70% { box-shadow: 0 0 0 12px rgba(225, 29, 72, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
 }
 
 @keyframes floatSlow {
@@ -70,12 +88,12 @@
 
 @keyframes borderGlowPulse {
   0%, 100% {
-    border-color: rgba(225, 29, 72, 0.25);
-    box-shadow: 0 0 10px rgba(225, 29, 72, 0.15);
+    border-color: rgba(138, 138, 104, 0.3);
+    box-shadow: 0 0 12px rgba(138, 138, 104, 0.15);
   }
   50% {
-    border-color: rgba(225, 29, 72, 0.65);
-    box-shadow: 0 0 22px rgba(225, 29, 72, 0.38);
+    border-color: rgba(138, 138, 104, 0.75);
+    box-shadow: 0 0 24px rgba(138, 138, 104, 0.35);
   }
 }
 
@@ -84,7 +102,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
 }
 
@@ -93,13 +111,16 @@
   animation: floatSlow 6s ease-in-out infinite;
 }
 
-.animate-pulse-ruby,
-.animate-pulse-gold {
-  animation: rubyPulse 2.5s infinite;
+.animate-pulse-olive {
+  animation: oliveGlowPulse 2.5s infinite;
+}
+
+.animate-pulse-rose {
+  animation: roseGlowPulse 2.5s infinite;
 }
 
 .animate-border-glow {
-  animation: borderGlowPulse 4s ease-in-out infinite;
+  animation: borderGlowPulse 3.5s ease-in-out infinite;
 }
 
 .animate-fade-in {

@@ -9,6 +9,7 @@
   gap: 12px;
   user-select: none;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .ameza-logo-symbol-wrap {
